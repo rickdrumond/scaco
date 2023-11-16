@@ -220,7 +220,7 @@ body {
 	/* left: 54vh; */
 	position: absolute;
 	right: 0;
-	bottom: 1px;
+	bottom: 1.85em;
 	cursor: pointer;
 	background-color: transparent;
 	border: none;
@@ -304,8 +304,15 @@ textarea {
 	width: 22% !important;
 	min-width: 300px;
 	padding: 1%;
+}
 
-
+.header-vertical-line {
+	border-left: 0.1em solid #c8c3c8;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 22%;
+	transform: translateX(-50%);
 }
 
 
@@ -941,11 +948,7 @@ table {
 
 .main.style2.left.dark.fullscreen .box p {
 	text-align: left;
-	/* Alinha o texto à esquerda */
-	width: 76%;
-	/* Define a largura do texto como 40% da tela */
-	/* margin: 0 auto; */
-	/* Centraliza horizontalmente */
+	width: 57%;
 	color: #0b1b30;
 }
 
@@ -1092,7 +1095,7 @@ input[type="submit"].style2.down,
 input[type="reset"].style2.down,
 .button.style2.down,
 button.style2.down {
-	background-image: url("images/arrow.svg");
+	background-image: url("../../images/arrow-down.png");
 }
 
 /* Form */
@@ -2171,8 +2174,9 @@ body.is-touch .poptrox-popup .closer {
 	left: 0;
 	top: 0;
 	width: 100%;
-	background: rgba(200, 195, 200, 0.95);
-	height: 0;
+	background-color: transparent;
+	transition: background-color 0.5s ease;
+	height: 11vh;
 	line-height: 3em;
 	box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1);
 }
@@ -2303,7 +2307,7 @@ body {
 	line-height: 1em;
 	margin-bottom: 1vh;
 	margin-left: 0vw;
-	margin-top: 40vh;
+	margin-top: 33vh;
 	font-weight: lighter;
 }
 
@@ -2410,15 +2414,34 @@ body {
 	background-position: -65vh;
 }
 
+.parag2 {
+	font-size: 0.86em;
+	line-height: 1.1;
+	text-align: justify;
+}
+
+.par-form {
+	font-size: 0.86em;
+}
+
 .right-half {
 	padding-left: 3em;
-	padding-top: 6em;
-	width: 55%;
+	padding-top: 5em;
+	width: 57%;
 	background-color: #96a3b7;
 	font-family: 'Brinnan-Light';
 	color: #0b1b30;
 	padding-right: 3em;
-	padding-bottom: 1em;
+}
+
+.OK-Check {
+	margin-left: 2%;
+	width: 1.3em;
+	height: 1.3em;
+}
+
+.check-modal {
+	display: none;
 }
 
 .text-form {
@@ -2431,7 +2454,7 @@ body {
 	border: none !important;
 	border-bottom: 1px solid #0e1e33 !important;
 	background-color: transparent !important;
-	padding: 5px !important;
+	padding: 0.2em !important;
 	color: #0b1b30 !important;
 	width: 100% !important;
 	box-sizing: border-box !important;
@@ -2448,23 +2471,27 @@ body {
 
 .div-flex {
 	display: flex !important;
-	justify-content: space-between !important;
-
+	justify-content: flex-start;
+	flex-direction: row;
+	align-items: center;
 }
+
 .div-flex input[type="checkbox"] {
-
-    appearance: none !important;
-    margin-bottom: 16px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    border: 1px solid #000;
-    background-color: transparent;
-    border-radius: 0;
-    height: 2em;
-	width: 2em;
+	appearance: none !important;
+	margin-bottom: 0.7em;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	border: 1px solid #000;
+	background-color: transparent;
+	border-radius: 0;
+	height: 1.2em;
+	width: 1.2em;
+	margin-top: 0.6em;
 }
+
 input[type="checkbox"]:checked {
-	background-color:#0b1b30; /* Cor de fundo quando o checkbox está marcado */
+	background-color: #0b1b30;
+	/* Cor de fundo quando o checkbox está marcado */
 }
 
 
@@ -2473,6 +2500,26 @@ input[type="checkbox"]:checked {
 	display: flex;
 	flex-direction: column;
 }
+
+.form-button {
+	background-color: #0b1b30 !important;
+	color: #FFF !important;
+	padding: 6px 33px !important;
+	font-size: 0.75em !important;
+	letter-spacing: 0.18em !important;
+	border: none !important;
+	width: 14em !important;
+	height: 3em !important;
+}
+
+.form-button:hover {
+	background-color: #465265 !important;
+	color: #FFF !important;
+
+}
+
+
+
 
 .top-half {
 	height: 40%;
@@ -2560,6 +2607,20 @@ input[type="checkbox"]:checked {
 
 .main.dark .button.style2.down {
 	background-image: url("../../images/arrow-down.png");
+	position: fixed;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	border: none;
+	display: flex;
+	width: 2%;
+	background-size: contain;
+	height: auto;
+	overflow: hidden;
+	text-align: center;
+	padding: 10px;
+	color: white;
+	text-decoration: none;
 }
 
 body.is-touch .main {
@@ -2794,6 +2855,50 @@ body.is-touch .main {
 	width: auto;
 	padding: 0.1em;
 	min-height: 45px;
+}
+
+#privacy-modal {
+	display: none;
+	position: fixed;
+	top: 66%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 6%;
+	background-color: white;
+	border: 1px solid #ccc;
+	z-index: 1000;
+	max-width: 80%;
+	font-family: 'Brinnan-Regular';
+	color: #0b1b30;
+	width: 72%;
+	height: 45vh;
+}
+
+#privacy-modal2 {
+	display: none;
+	position: fixed;
+	top: 66%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 6%;
+	background-color: white;
+	border: 1px solid #ccc;
+	z-index: 1000;
+	max-width: 80%;
+	font-family: 'Brinnan-Regular';
+	color: #0b1b30;
+	width: 72%;
+	height: 45vh;
+}
+
+#close-modal {
+	cursor: pointer;
+	float: right;
+	font-size: 2em;
+}
+
+#privacy-content {
+	margin-top: 20px;
 }
 
 
