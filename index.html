@@ -12,14 +12,12 @@
 </head>
 <style>
 	header {
-		transition: background-color 0.5s ease;
+		transition: background-color 0.2s ease;
 		z-index: 1000;
-		/* Certifique-se de que o cabeçalho esteja acima de outros elementos */
 	}
 
 	header img {
 		max-width: 100px;
-		/* Ajuste conforme necessário */
 		height: auto;
 	}
 </style>
@@ -27,8 +25,9 @@
 <body class="is-preload main-content">
 
 	<header id="header">
-		<img src="images/logo.png" alt="Logo 1" class="logo" />
-		<img src="images/logo2.png" alt="logo2" class="logo2" style="border-right: #fff solid 1px;" />
+		<a href="#intro"><img src="images/logo.png" alt="Logo 1" class="logo" />
+			<img src="images/logo2.png" alt="logo2" class="logo2" /></a>
+		<div class="header-vertical-line"></div>
 		<nav>
 			<ul>
 				<li><a href="#intro">PROJECTS</a></li>
@@ -36,7 +35,7 @@
 				<li><a href="#two">CONTACT</a></li>
 			</ul>
 		</nav>
-		<hr style="margin-top: 11vh;color: #c8c3c8;">
+		<hr style="margin: 0 0.2em; height: 1px; flex: 0.1em; margin-top: 11vh;color: #c8c3c8;">
 	</header>
 
 
@@ -48,25 +47,34 @@
 				<h2 style="color: #96a3b7;">BALANCE</h2>
 				<h3 class="lifestyle"><span style="font-size: 0.7em;word-spacing: 0.11em;">is a </span>lifestyle</h3>
 			</header>
-			<p class="parag1">At Scale Projects, we are dedicated to constructing
+			<p class="parag1">At Scale Projects, we are dedicated to building
 				inclusive communities that foster a sense of belonging
 				among real people. By prioritising collaborative designs
 				and sustainable infrastructure, we aim to create
 				vibrant neighbourhoods that support the needs and
 				aspirations of our residents.</p>
-			<button class="button" style="margin-top: 8vh;">CONTACT</button>
+			<button class="button" style="margin-top: 4vh;">CONTACT</button>
 			<footer>
-				<a href="#one" class="button style2 down" style="
-				border: none;
-				display: flex;
-				width: 4%;
-				background-size: contain;
-				height: auto;
-				left: 50%;
-				overflow: hidden;
-			">More</a>
+
 			</footer>
 		</div>
+		<a href="#one" class="button style2 down" style="
+				position: fixed;
+				bottom: 10px;
+				left: 50%;
+				transform: translateX(-50%);
+				border: none;
+				display: flex;
+				width: 2%;
+				background-size: contain;
+				height: auto;
+				overflow: hidden;
+				text-align: center;
+				padding: 10px;
+				color: white;
+				text-decoration: none;
+
+			">More</a>
 	</section>
 
 	<!-- One -->
@@ -88,10 +96,10 @@
 				nurturing dreams, facilitating a better future for all, and infusing every home
 				with the promise of peace of mind.<br>
 				No matter the situation in life, with a Scale home, you can trust that you’ll
-				find safety, joy, and the peace of mind you deserve. We ensure transparency,
+				find security, joy, and the peace of mind you deserve. We ensure transparency,
 				instill confidence, and approach our work with humility and a sense of
 				light-heartedness.<br>
-				For us, it’s not about a quick flip; it’s about crafting a narrative where our
+				For us, it’s not about a quick flip; it’s about crafting a vision where our
 				homeowners can create a lasting legacy filled with laughter, joy, and a bright
 				outlook on life. We are not just builders; we are storytellers of the future, where
 				each home becomes a chapter in the story of cherished memories, trust, and
@@ -108,10 +116,9 @@
 			</h4>
 		</div>
 
-		<!-- <a href="#two" class="button style2 down anchored main">Next</a> -->
+
 	</section>
 
-	<!-- Two -->
 	<section id="two" class="main left dark fullscreen style2 section-nap-scroll">
 		<div class="box style3">
 			<header>
@@ -121,10 +128,10 @@
 
 				</h2>
 			</header>
-			<p style="color: #0b1b30;font-family: Brinnan-Bold; font-weight: lighter;">We believe in strong, real and
-				thriving
-				connections. These are the values
-				that guide us.</p>
+			<p style="color: #0b1b30;font-family: Brinnan-Bold; font-weight: lighter;">These are the values that guide
+				us in everything that we do.
+				As folks learn about scale they will understand that we perform our acquisitions, development and
+				construction with these values in mind.</p>
 		</div>
 		<div class="texttoggle">
 			<div class="title">
@@ -166,11 +173,11 @@
 		</div>
 		<div class="right-half">
 			<h3>GET IN TOUCH</h3>
-			<p>At Scale Projects, we have several communities in various stages of design,
+			<p class="parag2">At Scale Projects, we have several communities in various stages of design,
 				development or construction at any given time. Register with us to stay up
 				to date on the latest news. </p>
 
-			<form action="#" method="post">
+			<form action="#" method="post" class="par-form">
 				<label for="fname">First name*</label>
 				<input type="text" id="fname" name="fname" class="text-input" required>
 
@@ -183,36 +190,69 @@
 				<label for="phone">Phone*</label>
 				<input type="tel" id="phone" name="phone" class="text-input" required>
 
-				<label for="style">Tell us what style of home you are looking for and location?</label>
-				<input type="text" id="style" name="style" class="text-input" required>
-
-				<div class="div-flex">
-					<label for="realtorCheckbox">ARE YOU A REALTOR?</label>
-					<input type="checkbox" id="realtorCheckbox" name="areYouRealtor" value="yes">
-					<label for="notRealtorCheckbox">NO</label>
-					<input type="checkbox" id="notRealtorCheckbox" name="areYouRealtor" value="no">
+				<div class="div-flex text-input" style="align-items: center; padding-right: 15em;">
+					<label for="realtorCheckbox" style="padding-right: 1em; font-weight: bold; font-size: 0.95em;">
+						ARE YOU A REALTOR?</label>
+					<input type="checkbox" id="yesRealtorCheckbox" name="areYouRealtor" value="yes">
+					<label for="yesRealtorCheckbox" style="padding-right: 1em;padding-left: 0.3em;">YES</label>
+					<input type="checkbox" id="noRealtorCheckbox" name="areYouRealtor" value="no">
+					<label for="noRealtorCheckbox" style="padding-right: 1em;padding-left: 0.3em;">NO</label>
 				</div>
 
-				<div class="div-flex">
-					<label for="contact-method">HOW WOULD YOU LIKE TO BE CONTACTED?</label>
+				<div class="div-flex text-input">
+					<label for="contact-method" style="padding-right: 1em; font-weight: bold; font-size: 0.95em;">
+						HOW WOULD YOU LIKE TO BE CONTACTED?</label>
 
-					<input type="checkbox" id="phone" name="contact-method" value="Phone">
-					<label for="phone">Phone</label>
+					<input type="checkbox" id="checkbox-phone" name="contact-method" value="Phone">
+					<label for="checkbox-phone" style="padding-right: 1em;padding-left: 0.3em;">Phone</label>
 
 					<input type="checkbox" id="email" name="contact-method" value="E-mail">
-					<label for="email" style="width: 7em;">E-mail</label>
+					<label for="email" style="padding-right: 1em;padding-left: 0.3em;">E-mail</label>
 
 					<input type="checkbox" id="text" name="contact-method" value="Text">
-					<label for="text">Text</label>
+					<label for="text" style="padding-right: 1em;padding-left: 0.3em;">Text</label>
 				</div>
 				<div class="div-flex">
 					<input type="checkbox" id="termsCheckbox" name="agreeToTerms" value="yes">
-					<label for="termsCheckbox">I agree to the terms</label>
+					<label for="termsCheckbox" style="padding-right: 1em;padding-left: 0.3em;">I agree to the <a
+							href="javascript:void(0)" onclick="openPrivacyModal()">terms</a></label>
 					<input type="checkbox" id="norobot" name="verifyRobot" value="yes">
-					<label for="norobot">I’m not a robot</label>
-					<input type="submit" value="SUBMIT">
+					<label for="norobot" style="padding-right: 1em;padding-left: 0.3em;">I’m not a robot</label>
 				</div>
-			</form>
+
+				<div style="display: flex;">
+
+					<input type="submit" value="SUBMIT" class="form-button">
+					<!-- elabora a função checagem de envio -->
+					<div class="check-modal">
+
+						<img src="images/CheckGree.png" alt="OK-Check" class="OK-Check" />
+						<h3>
+							YOUR SUBMISSION HAS BEEN RECEIVED. WE'LL BE IN TOUCH SOON!
+						</h3>
+					</div>
+				</div>
+		</div>
+
+		</form>
+
+
+
+
+		<div id="privacy-modal" style="display: none;padding: 2%;width: 44%;top: 44%;left: 25%;">
+			<span id="close-modal" onclick="closePrivacyModal()">&times;</span>
+			<div id="privacy-content" style="line-height: 1.5em; font-size: 0.78em; letter-spacing: 0.08em;">
+				<p>The information you provide will be kept confidential
+					and used only by Fifth Avenue Real Estate Marketing to
+					enhance your home buying experience and the level of
+					service you receive. The members of our Sales Team are
+					all licensed Real Estate Professionals with Fifth Avenue
+					Real Estate Marketing and therefore are unable to provide
+					representation to potential buyers. To learn more about
+					various forms of Realtor representation and the choices
+					available to you, please <a href="javascript:void(0)">click here</a></p>
+			</div>
+		</div>
 
 
 
@@ -250,13 +290,15 @@
 
 		<div class="left-side">
 			<h2 class="title3">ABOUT</h2>
-			<p style="font-size: 0.87em;font-family: Brinnan-Light;color: black;">Meet Scale's development at x 54A
+			<p style="font-size: 0.87em;font-family: Brinnan-Light;color: black;">
+				Meet Scale's development at 20220 54A
 				Avenue, in Langley City - BC,
 				Canada. Seventy-five homes, including
 				studios and 1 and 2-bedroom apartments, are the latest addition to this vibrant community. Strategically
 				located in the heart of Langley City, "your life in focus" truly comes alive. Everything you desire is
 				literally at your doorstep. Need to do some shopping? How about a romantic dinner for two? With shops,
-				services, and restaurants ready to serve you, life at x 54A Avenue is as convenient as it is exciting.
+				services, and restaurants ready to serve you, life at 20220 54A Avenue is as convenient as it is
+				exciting.
 			</p>
 			<hr class="line">
 			<div class="left-side-bottom">
@@ -274,8 +316,8 @@
 		<div class="right-side">
 			<h2 class="title3">LOCATION</h2>
 			<p style="font-size: 0.87em;font-family: Brinnan-Light;color: black;">
-				x 54A Avenue, Langley city - BC, Canada</p>
-			<a href="https://maps.app.goo.gl/3PtdPVLHXEfMsaS68" target="_blank">
+				20220 54A Avenue, Langley city - BC, Canada</p>
+			<a href="https://maps.app.goo.gl/SJma12yQZQNNAJnJ9" target="_blank">
 				<img src="images/map.png" alt="Map Image" class="map_image">
 				<a href="#" class="button" style="background-color: #848c70;border: none; padding: 8px 33px;">VISIT
 					WEBSITE</a>
@@ -353,10 +395,32 @@
 			width: 100%;
 			margin-bottom: 2em;
 			">
-				Copyright &copy; 2023 Scale Projects <a href="#" style="margin-left: 10px; border-bottom: solid 1px;">
-					Privacy Policy</a></p>
+				Copyright &copy; 2023 Scale Projects
+				<a href="javascript:void(0)" style="margin-left: 10px; border-bottom: solid 1px;"
+					onclick="openPrivacyModal2()">Privacy
+					Policy</a>
+			</p>
+
+			<!-- Modal de política de privacidade -->
+			<div id="privacy-modal2">
+				<span id="close-modal" onclick="closePrivacyModal2()">&times;</span>
+				<h2 style="font-size: 0.8em; letter-spacing: 0.1em;">Privacy Policy:</h2>
+				<hr style="margin-top: 4%;margin-bottom: 5%;border: 0;border-top: 1px solid #0b1b30;">
+				<div id="privacy-content" style="font-size: 0.78em; letter-spacing: 0.08em;">
+					<p>Information provided by Scale Projects, and their partners on this page is subject to change
+						without notice. For
+						the most up to date information on any development please register or contact the presentation
+						centre to
+						directly to speak with a licensed sales team. E.&.O.E.</p>
+				</div>
+			</div>
 
 		</div>
+
+
+
+
+
 		<div class="side-center">
 			<h2 style="
 		color: #96a3b7;
@@ -413,11 +477,11 @@
 				style="line-height: 1.48em;font-size: 0.87em;font-family: Brinnan-Light;color: #ffffff;margin-left: 1px;margin-right: 29%;">
 				P.O BOX 61689 BROOKSWOOD<br>
 				Langley, BC V3A 8C8<br>
-				(604) 765-9557<br>
+
 				info@scalegroup.ca
 			</p>
-			<img src="images/logo2.png" alt="logo2" class="logo2" style="
-			position: relative;margin-bottom: 0.45em;left: -4%;margin-top: 10%;">
+			<a href="#intro"><img src="images/logo2.png" alt="logo2" class="logo2" style="
+			position: relative;margin-bottom: 0.45em;left: -4%;margin-top: 10%;"></a>
 
 
 		</div>
@@ -435,6 +499,20 @@
 	<script src="assets/js/main.js"></script>
 
 </body>
+
+<script>
+	window.addEventListener('scroll', function () {
+		var header = document.getElementById('header');
+		var scrollPosition = window.scrollY;
+
+		if (scrollPosition > 100) {
+			header.style.backgroundColor = '#0b1b30';
+		} else {
+			header.style.backgroundColor = 'transparent';
+		}
+	});
+</script>
+
 <script>
 	const buttons = document.querySelectorAll('.toggle-button');
 	buttons.forEach(button => {
@@ -451,17 +529,22 @@
 		});
 	});
 </script>
-<script>
-	window.addEventListener('scroll', function () {
-		var header = document.getElementById('header');
-		var scrollPosition = window.scrollY;
 
-		if (scrollPosition > 100) {
-			header.style.backgroundColor = '#2c3e50';
-		} else {
-			header.style.backgroundColor = 'transparent';
-		}
-	});
+<script>
+	function openPrivacyModal() {
+		document.getElementById('privacy-modal').style.display = 'block';
+	}
+
+	function closePrivacyModal() {
+		document.getElementById('privacy-modal').style.display = 'none';
+	}
+	function openPrivacyModal2() {
+		document.getElementById('privacy-modal2').style.display = 'block';
+	}
+
+	function closePrivacyModal2() {
+		document.getElementById('privacy-modal2').style.display = 'none';
+	}
 </script>
 
 </html>
