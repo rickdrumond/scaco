@@ -1,0 +1,376 @@
+@media (min-width: 9998px) {}
+
+@media screen and (min-width: 2090px) and (max-width: 13440px) and (min-height: 1080px) {}
+
+
+@media (max-width: 1465px) {}
+
+
+@media (max-width: 1319px) {}
+
+
+@media (max-width: 1165px) {
+
+
+    .header-vertical-line {
+        left: 30vw;
+    }
+
+    #header nav {
+        left: 33.5vw;
+    }
+
+    #intro {
+        background-position: 32%;
+    }
+
+
+}
+
+
+@media (max-width: 960px) {
+    html {
+        font-size: 80%;
+    }
+
+
+}
+
+@media (max-width: 740px) {
+    .header-vertical-line {
+        left: 30vw;
+    }
+
+}
+
+ 
+
+
+@media (min-height: 601px){
+    .line-header{
+        margin-top: 11vh;
+    }
+}
+
+@media (max-height: 600px){
+    .line-header{
+        margin-top: 75px;
+    }
+    .header-vertical-line {
+        height: 75PX;
+    }
+    .logo-pag2 {
+        top: 92vh;
+    }
+}   
+
+
+@media (max-width: 767px) {}
+@media (max-width: 640px) {
+
+
+    body {
+        padding: 0;     
+   
+    }
+    .header-vertical-line {
+        display: none;
+    }
+
+    .logo {
+        top: 0.1%;
+        height: auto;
+        position: fixed;
+        right: 8%;
+        width: 5% !important;
+        min-width: 100px;
+        padding: 4%;
+    }
+
+    .logo2 {
+        padding: 5%;
+        left: 0;
+    }
+
+  
+
+    .main.style1 h2 {
+        font-size: 2em;
+        margin-top: 12vh;
+    }
+
+    .lifestyle {
+        font-size: 2.4em;
+    }
+
+    .content {
+        width: 61% !important;
+    }
+
+    .parag1 {
+        margin-bottom: 0vh;
+        margin-top: 8vh;
+        font-family: 'Brinnan-Light';
+        font-weight: lighter;
+        font-size: 1.1em;
+    }
+
+    .box.style2 {
+        padding: 1.5em 1.25em 1.5em 1.25em;
+        background-color: rgb(11 27 48);
+        margin-right: 6vw;
+        margin-left: 6vw;
+
+    }
+
+    .main.style2 {
+        padding: 0 15px 0 15px;
+    }
+
+    .bottom-left {
+        display: none;
+    }
+
+    .mainMobile {
+        display: flex;
+        position: relative;
+        margin: 0;
+        overflow-x: hidden;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: space-around;
+    }
+
+    .box.style3 {
+        top: 2vh;
+        margin-left: 7vw;
+    }
+
+    .main.style2.left.dark.fullscreen .box p {
+        text-align: left;
+        width: 82%;
+        color: #0b1b30;
+    }
+
+    .texttoggle {
+        margin-top: 4vh;
+        margin-left: 0%;
+        font-size: 0.7em;
+
+
+    }
+
+    .t-mobile {
+
+        padding: 2px;
+    }
+
+    .split-section {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-half {
+        width: 100%;
+        height: 51vh;
+        background-position: 59%;
+    }
+
+    .right-half {
+        padding-left: 2em;
+        padding-top: 2em;
+        width: 100%;
+        padding-right: 2em;
+    }
+
+    .div-flex {
+        display: flex !important;
+        justify-content: flex-start;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .button {
+        margin-right: 11%;
+    }
+
+    #four {
+        height: 40vh !important;
+        min-height: 20vh !important;
+    }
+
+    .bottom-half {
+        padding: 80px;
+    }
+
+    .left-side {
+        width: 90%;
+        padding: 2em;
+    }
+
+    #five {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left-side-bottom {
+        flex-direction: column;
+    }
+
+    .map_image {
+        width: 83vw;
+    }
+
+    #six {
+        height: 40vh !important;
+        min-height: 20vh !important;
+    }
+
+    .Streetscape_image {
+        height: 40vh;
+        top: 48%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .tree_frames {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .litle_frame {
+        height: auto;
+        width: 95%;
+        padding: 1.2vw;
+    }
+
+
+    .text3 {
+        bottom: 6%;
+    }
+
+    
+
+    /* Estilos gerais do footer */
+    #footer {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        padding: 4px;
+        background-color: #0b1b30;
+        flex-direction: row;
+        align-items: flex-end;
+        flex-direction: row;
+    }
+
+    .side-l {
+        width: 28%;
+        height: 10%;
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-top: 0%;
+        padding-left: 2%;
+    }
+
+    .side-center .bl-dow {
+        margin-bottom: 109%;
+        display: flex;
+        width: 5%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+    }
+
+  
+    /* Estilos para o modal de política de privacidade */
+    #privacy-modal2 {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .side-center {
+        bottom: 18%;
+        right: 13%;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-content: flex-end;
+        justify-content: center;
+        align-items: flex-end;
+        height: auto;
+        width: 20%;
+        padding-bottom: 1em;
+        
+    }
+    /* Estilos para o conteúdo do modal */
+    #privacy-content {
+        width: 600px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+
+    .container-icons {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5px;
+    }
+
+    .container-icons img {
+        margin: 0 10px;
+    }
+
+    .privacy{
+        width: 100%;
+        margin-bottom: 0em;
+
+    }
+    .side-r {
+        padding: 12px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        width: 47%;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        position: relative;
+        top: 3%;
+    }
+    .logo-fifth{
+        left: 9%;
+        height: auto;
+        width: 3%;
+        max-width: 200px;
+        position: relative;
+    }
+    .menu-footer  {
+        display: none;
+    }
+    .logodown {
+        display: none;
+    }
+}
+
+

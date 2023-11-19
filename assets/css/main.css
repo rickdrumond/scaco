@@ -1,4 +1,12 @@
-/* @import url("fontawesome-all.min.css"); */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+}
 
 @font-face {
 	font-family: 'AddingtonCF-DemiBoldItalic';
@@ -137,6 +145,9 @@ video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	max-width: 100vw;
+
+
 }
 
 article,
@@ -160,19 +171,25 @@ section {
 }
 
 .main-content {
-
-	scroll-snap-type: y mandatory;
 	height: 100vh;
-	width: 100%;
-	overflow-y: scroll;
+	/* overflow-y: scroll;
+	scroll-snap-type: y mandatory; */
+	
 }
+
 
 
 body {
 	line-height: 1;
-	/* scroll-snap-type: y mandatory; */
 }
 
+.line-header{
+	 margin-top: 12vh;
+	 margin: 0 0.2em;
+	 height: 1px; 
+	 flex: 0.1em; 
+	 color: #c8c3c8;
+}
 
 .texttoggle {
 	font-family: 'Brinnan-Bold';
@@ -180,12 +197,12 @@ body {
 	margin-top: 20vh;
 	width: 100%;
 	text-align: left;
-	/* margin-right: 0%; */
-	margin-left: 2%;
+	margin-left: -24%;
 	align-items: flex-start;
 	flex-direction: column;
 	align-content: flex-start;
 	justify-content: space-between;
+	padding: 1em;
 }
 
 
@@ -317,13 +334,10 @@ textarea {
 
 
 .logo-pag2 {
-	left: -5%;
-	height: auto;
-	position: relative;
-	right: auto;
-	width: 8vh !important;
-	padding: 0.3%;
-	top: 112vh;
+    position: relative;
+    width: 9vh !important;
+    height: auto;
+    padding-top: 3vh;
 }
 
 .box.style3 {
@@ -357,7 +371,7 @@ html {
 body {
 	background: #ffffff;
 	height: 100%;
-	min-width: 320px;
+	/* min-width: 320px; */
 }
 
 body.is-preload *,
@@ -845,24 +859,40 @@ h6 {
 }
 
 .bottom-left {
-	color: white;
-	font-family: 'Brinnan-Light';
-	right: 77vw;
-	position: absolute;
-	bottom: 9vh;
-	left: 3vw;
-	padding: 10px;
-	font-weight: bold;
-	letter-spacing: 0px;
-	text-align: justify;
-	margin-right: 3vw;
+    width: 18%;
+    bottom: 5%;
+    left: 11%;
+    color: white;
+    font-family: 'Brinnan-Light';
+    font-weight: bold;
+    position: absolute;
+    padding: 0.2em;
+    letter-spacing: 0.1em;
+    text-align: left;
+    margin-right: 3vw;
+    line-height: normal;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: flex-end;
+    align-items: flex-start;
 }
 
 .vertical-line {
-	border-left: 2px solid #fff;
-	height: 82vh;
+	left: 11vw;
+	border-left: 1px solid #fff;
+	height: 75%;
 	margin-left: 5px;
+	position: absolute;
+	top: 0;
 	color: white;
+}
+.about{
+	font-size: 0.87em;
+	font-family: Brinnan-Light;
+	color: white;
+	line-height: 1.7em;
 }
 
 
@@ -963,9 +993,9 @@ table {
 }
 
 .box.style2 {
-	margin-right: 6vw;
-	padding: 3.5em 2.5em 3.5em 2.5em;
-	margin-left: 31vw;
+    margin-right: 15vw;
+    padding: 4.5em 0.5em 0.5em 0.5em;
+    margin-left: 33vw;
 }
 
 @media screen and (max-width: 736px) {
@@ -1024,7 +1054,7 @@ button.down {
 	background-position: center center;
 	background-repeat: no-repeat;
 	text-indent: -10em;
-	overflow: hidden;
+	
 }
 
 input[type="button"].down.anchored,
@@ -1146,7 +1176,7 @@ form>.fields>.field.quarter {
 	width: calc(25% - 0.375em);
 }
 
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 480px) {
 
 	form>.fields {
 		width: calc(100% + 2em);
@@ -1170,7 +1200,7 @@ form>.fields>.field.quarter {
 		width: calc(100% - 1em);
 	}
 
-}
+} */
 
 label {
 	display: block;
@@ -2176,7 +2206,7 @@ body.is-touch .poptrox-popup .closer {
 	width: 100%;
 	background-color: transparent;
 	transition: background-color 0.5s ease;
-	height: 11vh;
+	height: auto;
 	line-height: 3em;
 	box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1);
 }
@@ -2222,6 +2252,9 @@ body.is-touch .poptrox-popup .closer {
 	line-height: 6.3em;
 	padding: 0 3.82em 0 0;
 	outline: 0;
+}
+.dark-bg{
+	color:#fff;
 }
 
 @media screen and (max-width: 736px) {
@@ -2271,7 +2304,7 @@ body {
 	display: flex;
 	position: relative;
 	margin: 0;
-	overflow-x: hidden;
+
 }
 
 
@@ -2355,7 +2388,7 @@ body {
 	-ms-justify-content: center;
 	justify-content: center;
 	padding: 3em 0 3em 0;
-	overflow: hidden;
+	
 }
 
 .main.style2>.content {
@@ -2408,11 +2441,13 @@ body {
 
 
 .left-half {
-	width: 45%;
-	background: url('../../images/woman_holds_a_dog.png') center/cover no-repeat;
-	height: 100vh;
-	background-position: -65vh;
+    width: 45%;
+    height: auto;
+    background: url(../../images/woman_holds_a_dog.png) center/cover no-repeat;
+    background-position: 58% 25%;
 }
+
+.le
 
 .parag2 {
 	font-size: 0.86em;
@@ -2616,7 +2651,7 @@ input[type="checkbox"]:checked {
 	width: 2%;
 	background-size: contain;
 	height: auto;
-	overflow: hidden;
+	
 	text-align: center;
 	padding: 10px;
 	color: white;
@@ -2633,6 +2668,7 @@ body.is-touch .main {
 	justify-content: flex-start;
 	align-items: flex-start;
 	padding: 4em;
+	margin-top: 5%;
 }
 
 .line {
@@ -2677,41 +2713,28 @@ body.is-touch .main {
 	justify-content: flex-start;
 	align-items: flex-start;
 	padding: 4em;
+	margin-top: 5%;
 }
 
 .Streetscape_image {
-	position: absolute;
-	top: 56%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	height: 77vh;
-	z-index: 4;
-}
+    position: absolute;
+    top: 56%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    z-index: 4;
+    width: 80vw;
+	max-width: 100%;
+	max-height: 100%;
+  }
 
-.frame_left {
-	z-index: 0;
-	padding: 1em;
-	position: absolute;
-	bottom: -2vh;
-	left: 11vw;
-	height: 14vh;
-}
-
-
-.frame_right {
-	z-index: 0;
-	padding: 1em;
-	position: absolute;
-	height: 14vh;
-	top: 10vh;
-	right: 11vw;
-}
 
 
 .litle_frame {
-	height: 55vh;
-	width: 24vw;
-	padding: 1.8vw;
+    height: auto;
+    width: 24vw;
+    padding: 1.8vw;
+	max-width: 100%;
 }
 
 .tree_frames {
@@ -2723,6 +2746,7 @@ body.is-touch .main {
 	align-content: center;
 	margin-top: 0vh;
 	margin-left: 13vw;
+	
 }
 
 
@@ -2790,71 +2814,115 @@ body.is-touch .main {
 }
 
 .footer .side-l {
-	overflow: hidden;
+	
 	text-decoration: none;
 }
 
 .side-l {
-	width: 25%;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	align-content: flex-start;
-	justify-content: space-between;
-	align-items: flex-start;
-	padding-top: 10%;
-	padding-left: 3%;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-start;
+    padding-top: 3%;
+    padding-left: 1%;
+    justify-content: space-between;
 }
-
 .side-l a {
-	color: black;
-	text-decoration: none;
-
-
+    color: black;
+    text-decoration: none;
+ 
 }
 
 .side-center {
-	display: flex;
-	flex-direction: row;
-	align-content: flex-end;
-	justify-content: center;
-	align-items: flex-end;
-	height: auto;
-	width: 47%;
-	padding-bottom: 1em;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+    justify-content: center;
+    align-items: flex-end;
+    height: auto;
+    width: 47%;
+    padding-bottom: 1em;
+}
+.side-center .balance{
+	color: #96a3b7;
+	font-size: 1.4em;
+	font-weight: lighter;
+	margin-top: 0.35em;
+}
+.side-center .lst{
+	font-size: 2em;
+	padding-left: 0.2em;
+	color: #fff;
+	margin-bottom: 0;
+	letter-spacing: normal;
+}
+.side-center .bl-dow {
+    display: flex;
+    width: 65%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.menu-footer {
+    line-height: 3em;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 4%;
+}		
+
+.logo2down {
+    position: relative;
+    margin-bottom: 0%;
+    margin-top: 25%;
+}
+.adress{
+		line-height: 1.48em;
+		font-size: 0.87em;
+		font-family: Brinnan-Light;
+		color: #ffffff;
+		margin-left: 1px;
+		margin-right: 0%;
+
 }
 
 
 .logo-fifth {
-	left: 70%;
-	height: auto;
-	width: 46%;
-	max-width: 200px;
-	position: relative;
+    left: 43%;
+    height: auto;
+    width: 47%;
+    max-width: 200px;
+    position: relative;
 }
 
 .side-r {
-	display: flex;
-	flex-direction: column;
-	align-content: flex-start;
-	justify-content: flex-end;
-	align-items: flex-start;
-	height: inherit;
-	width: 27%;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: inherit;
+    width: 27%;
 }
 
 .container-icons {
-	display: flex;
-	justify-content: center;
-	margin-top: 1rem;
-
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 6%;
 }
 
 .container-icons img {
-	height: 6vh;
-	width: auto;
-	padding: 0.1em;
-	min-height: 45px;
+    height: 6vh;
+    width: auto;
+    padding-right: 0.2em;
+    min-height: 45px;
 }
 
 #privacy-modal {
@@ -2900,7 +2968,37 @@ body.is-touch .main {
 #privacy-content {
 	margin-top: 20px;
 }
+.privacy{
+	line-height: 1.48em;
+	font-size: 0.64em;
+	font-family: Brinnan-Light;
+	color: #ffffff;
+	margin-left: 1px;
+	margin-right: 29%;
+	margin-top: 4%;
+	width: 100%;
+	margin-bottom: 2em;
+}
 
+.logo2down {
+
+    position: relative;
+    margin-bottom: 0%;
+    margin-top: 25%;
+    left: -3%;
+}
+.logodown {
+    display: block;
+    position: relative;
+    margin-bottom: -8%;
+    margin-top: auto;
+    left: 75%;
+}
+.BALANCE {
+    text-align: center;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+}
 
 
 @media screen and (max-width: 1920px) {
@@ -3004,7 +3102,7 @@ body.is-touch .main {
 	padding: 0.5em;
 	background: #0b1b30;
 	color: rgba(185, 186, 187, 0.5);
-	overflow: hidden;
+	
 	height: 57vh;
 }
 
@@ -3108,7 +3206,7 @@ body.is-touch .main {
 	background-size: cover;
 	background-attachment: fixed, fixed;
 	background-position: top left, center center;
-	overflow: hidden;
+	
 }
 
 #seven {
@@ -3119,17 +3217,19 @@ body.is-touch .main {
 }
 
 #eight {
-	background-image: url("../../images/cat.png");
-	background-size: cover;
-	background-attachment: fixed, fixed;
-	background-position: top left, center center;
+    min-height: 34vh !important;
+    width: 100%;
+    background-image: url(../../images/cat.png);
+    background-size: cover; /* Alterado para 'cover' para preencher o contêiner */
+    background-position: center;
+    background-repeat: no-repeat;
+	height: 100vh;
 }
 
 
-/* Contact */
 
 #contact {
-	overflow: hidden;
+	
 	padding-bottom: 0;
 }
 
