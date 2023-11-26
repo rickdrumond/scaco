@@ -2,3 +2,4 @@
 /dist/**
 !/dist/.gitkeep
 /.parcel-cache
+/.vscode

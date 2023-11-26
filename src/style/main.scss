@@ -1,6 +1,10 @@
 @import 'modern-normalize/modern-normalize';
 @import 'colors.module';
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   background-color: $dark-blue;
 }
