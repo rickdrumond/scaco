@@ -3,11 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Scale Projects</title>
-    <link rel="stylesheet" href="style/main.scss">
+    <title>SCALE Projects</title>
+    <link rel="stylesheet" href="style/main.scss" />
     <script type="module" src="js/main.js"></script>
   </head>
   <body>
-    <h1>We rollin'</h1>
+    <header>
+      <a href="/" id="brand-link">
+        <img src="img/brand.png" alt="SCALE Projects" />
+      </a>
+      <button
+        id="menu-toggler"
+        type="button"
+        class="hamburger hamburger--squeeze"
+        onclick="toggleMenu(this)"
+      >
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+      <nav id="menu">
+        <ul>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="cover"></section>
+    <section id="about"></section>
+    <section id="values"></section>
+    <section id="contact"></section>
+    <section id="projects"></section>
+    <section id="finale"></section>
+    <footer></footer>
   </body>
 </html>

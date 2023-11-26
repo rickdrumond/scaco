@@ -16,6 +16,7 @@
     "tailwindcss": "^3.3.5"
   },
   "dependencies": {
+    "hamburgers": "^1.2.1",
     "modern-normalize": "^2.0.0"
   }
 }

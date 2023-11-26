@@ -1,10 +1,44 @@
-@import 'modern-normalize/modern-normalize';
-@import 'colors.module';
+@import "modern-normalize/modern-normalize";
+
+@import "colors.module";
+
+$hamburger-types: (squeeze);
+$hamburger-layer-color: $logo-gray;
+@import "hamburgers/_sass/hamburgers/hamburgers";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* TODO: remove */
 body {
   background-color: $dark-blue;
+  height: 3000px; // TODO: remove
+}
+
+header {
+  display: flex;
+  columns: 2;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+#brand-link {
+  flex-basis: 80%;
+}
+
+nav {
+  display: flex;
+  flex-basis: 100%;
+}
+
+#menu-toggler {
+  margin-left: auto;
+}
+
+#menu {
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
 }
