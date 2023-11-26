@@ -2,10 +2,14 @@
   "name": "scale-scaco",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "source": "src/index.html",
+  "browserlist": "> 0.5%, last 2 versions, Firefox ESR, not dead",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "parcel"
   },
   "author": "Rick Drumond",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.10.3"
+  }
 }
