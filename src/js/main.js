@@ -1,4 +1,4 @@
 window.toggleMenu = button => {
-  button.classList.toggle('is-active');
+  button.classList.toggle('tham-active');
   document.getElementById('menu').classList.toggle('is-active');
 }

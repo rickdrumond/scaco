@@ -1,18 +1,16 @@
 @import "modern-normalize/modern-normalize";
 
 @import "colors.module";
-
-$hamburger-types: (squeeze);
-$hamburger-layer-color: $logo-gray;
-@import "hamburgers/_sass/hamburgers/hamburgers";
+@import "fonts.module";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* TODO: remove */
+
 body {
-  background-color: $dark-blue;
   height: 3000px; // TODO: remove
+  background-color: $dark-blue;
+  // font-family: $ff-winkell;
 }
 
 header {
@@ -32,7 +30,12 @@ nav {
 }
 
 #menu-toggler {
-  margin-left: auto;
+  margin: auto;
+  width: 50px;
+
+  .tham-inner {
+    background-color: $logo-gray;
+  }
 }
 
 #menu {
