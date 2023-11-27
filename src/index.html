@@ -6,6 +6,7 @@
     <title>Scale Projects</title>
     <link rel="stylesheet" href="style/main.scss" />
     <script type="module" src="js/main.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
   <body>
     <header>
@@ -103,7 +104,120 @@
           life.”
         </details>
       </section>
-      <section id="contact"></section>
+      <section id="contact">
+        <h2>Get in touch</h2>
+        <p>
+          At Scale Projects, we have several communities in various stages of
+          design, development or construction at any given time. Register with
+          us to stay up to date on the latest news.
+        </p>
+        <form
+          action="https://scali-landingpage.vercel.app/api/enviar-formulario"
+          method="post"
+          id="contact-form"
+        >
+          <label>
+            First name*
+            <input
+              type="text"
+              name="fname"
+              autocomplete="given-name"
+              required
+            />
+          </label>
+          <label>
+            Last name*
+            <input
+              type="text"
+              name="lname"
+              autocomplete="family-name"
+              required
+            />
+          </label>
+          <label>
+            E-mail*
+            <input type="email" name="email" required autocomplete="email" />
+          </label>
+          <label>
+            Phone*
+            <input type="tel" name="phone" autocomplete="tel" required />
+          </label>
+          <label>
+            City of residence*
+            <input
+              type="text"
+              name="city"
+              autocomplete="address-level3"
+              required
+            />
+          </label>
+          <label>
+            Where did you hear about us?
+            <select name="hearAbout" required>
+              <option value=" "></option>
+              <option value="Livabl">Livabl</option>
+              <option value="Facebook/Instagram">Facebook/Instagram</option>
+              <option value="Google">Google</option>
+              <option value="Fifth Ave">Fifth Ave</option>
+              <option value="Newspaper">Newspaper</option>
+              <option value="Radio">Radio</option>
+              <option value="Print ads">Print ads</option>
+              <option value="Signage">Signage</option>
+              <option value="Realtor">Realtor</option>
+              <option value="Family/Friends">Family/Friends</option>
+              <option value="Other">Other</option>
+            </select>
+          </label>
+          <div class="checkbox-section">
+            <p>ARE YOU A REALTOR?</p>
+            <label class="flex items-center gap-1">
+              <input type="radio" name="areYouRealtor" value="yes" />
+              Yes
+            </label>
+            <label class="flex items-center gap-1">
+              <input type="radio" name="areYouRealtor" value="no" />
+              No
+            </label>
+          </div>
+          <div class="checkbox-section">
+            <p>HOW WOULD YOU LIKE TO BE CONTACTED?</p>
+            <label>
+              <input type="checkbox" name="contact-method" value="Phone" />
+              Phone
+            </label>
+            <label>
+              <input type="checkbox" name="contact-method" value="E-mail" />
+              E-mail
+            </label>
+            <label>
+              <input type="checkbox" name="contact-method" value="Text" />
+              Text
+            </label>
+          </div>
+          <label>
+            <input
+              type="checkbox"
+              name="agreeToConsent"
+              value="yes"
+              style="margin-bottom: -5px"
+              required
+            />
+            Yes, I consent to receiving electronic messages from Scale Projects
+            and Fifth Avenue Real Estate Marketing Ltd. with updates on Scale
+            and other projects that may be of interest to me. If you wish to
+            stop receiving this information at any time, simply check
+            unsubscribe at the bottom of any email received or contact
+            live@scale.ca with unsubscribe in the subject line.
+          </label>
+          <div
+            class="g-recaptcha"
+            data-sitekey="6Lc2tRspAAAAAMLNy6B2O23BagKcxv7DkrXMKrd5"
+            data-callback="onRecaptchaSuccess"
+            data-size="invisible"
+          ></div>
+          <button type="submit" class="button button--solid">Submit</button>
+        </form>
+      </section>
       <section id="projects"></section>
       <section id="finale"></section>
     </main>
