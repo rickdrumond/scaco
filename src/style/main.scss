@@ -53,7 +53,7 @@ header {
 }
 
 section {
-  padding: 18px;
+  padding: 48px 18px 48px 18px;
 }
 
 #cover {
@@ -107,7 +107,7 @@ section {
 
 #about {
   h2 {
-    margin: 24px 0;
+    margin-bottom: 36px;
     color: $logo-gray;
   }
 
@@ -133,6 +133,61 @@ section {
     img {
       max-height: 1.5em;
       margin-top: 1em;
+    }
+  }
+}
+
+#brand-values {
+  background-color: $logo-gray;
+
+  h2 {
+    font-size: 1.9em;
+    font-family: $ff-brinnan-bold;
+    color: $light-blue;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 24px;
+
+    span {
+      font-family: $ff-brinnan;
+      color: $dark-blue;
+    }
+  }
+
+  h3 {
+    margin-bottom: 24px;
+    font-family: $ff-brinnan;
+    color: $dark-blue;
+  }
+
+  details {
+    border-bottom: 1px solid $dark-blue;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    font-family: $ff-brinnan;
+    color: $dark-blue;
+
+    &:first-of-type {
+      border-top: 1px solid $dark-blue;
+    }
+
+    summary {
+      display: flex;
+      align-items: center;
+      font-family: $ff-brinnan-bold;
+      list-style: none;
+      cursor: pointer;
+
+      &::after {
+        margin-left: auto;
+        content: "+";
+        font-size: 2em;
+        font-family: $ff-brinnan-light;
+      }
+    }
+
+    &[open] summary::after {
+      content: "-";
     }
   }
 }
