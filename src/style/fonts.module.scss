@@ -6,4 +6,41 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "AddingtonCF-DemiBoldItalic";
+  src: url("../fonts/AddingtonCF-DemiBoldItalic.otf") format("opentype"),
+    url("../fonts/AddingtonCF-DemiBoldItalic.otf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Brinnan-Bold";
+  src: url("../fonts/Brinnan\ Bold.otf") format("opentype"),
+    url("../fonts/Brinnan\ Bold.otf") format("truetype");
+  font-weight: bold;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Brinnan-Light";
+  src: url("../fonts/Brinnan\ Light.otf") format("opentype"),
+    url("../fonts/Brinnan\ Light.otf") format("truetype");
+  font-weight: light;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Brinnan-Regular";
+  src: url("../fonts/Brinnan\ Regular.otf") format("opentype"),
+    url("../fonts/Brinnan\ Regular.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 $ff-winkell: "Winkell-SuperWide", Helvetica, Arial, sans-serif;
+$ff-addington: "AddingtonCF-DemiBoldItalic", "Times New Roman", Times, serif;
+$ff-brinnan: "Brinnan-Regular", Helvetica, Arial, sans-serif;
+$ff-brinnan-light: "Brinnan-Light", Helvetica, Arial, sans-serif;
+$ff-brinnan-bold: "Brinnan-Bold", Helvetica, Arial, sans-serif;

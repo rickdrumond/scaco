@@ -18,36 +18,89 @@ header {
   display: flex;
   columns: 2;
   flex-wrap: wrap;
-}
 
-#brand-link {
-  flex-basis: 80%;
-}
+  #brand-link {
+    flex-basis: 80%;
+  }
 
-nav {
-  display: flex;
-  flex-basis: 100%;
-}
+  #menu-toggler {
+    margin: auto;
+    width: 50px;
 
-#menu-toggler {
-  margin: auto;
-  width: 50px;
+    .tham-inner {
+      background-color: $logo-gray;
+    }
+  }
 
-  .tham-inner {
-    background-color: $logo-gray;
+  #menu {
+    flex-basis: 100%;
+    display: none;
+    color: $logo-gray;
+    line-height: 2em;
+
+    &.is-active {
+      display: block;
+    }
+
+    ul {
+      margin: 10px;
+
+      li {
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+      }
+    }
   }
 }
 
-#menu {
-  display: none;
-  color: $logo-gray;
-  line-height: 2em;
+section {
+  padding: 10px;
+}
 
-  &.is-active {
-    display: block;
+#cover {
+  min-height: 100vh;
+  background: fixed url(../img/cover.png) left no-repeat;
+
+  h2 {
+    font-size: 1.5em;
+    color: $light-blue;
   }
 
-  ul {
-    margin: 10px;
+  h3 {
+    margin-top: -0.9em;
+    margin-bottom: 0.5em;
+    color: white;
+    font-family: $ff-addington;
+    font-size: 1.6em;
+
+    span {
+      font-size: 1.5em;
+    }
   }
+
+  p {
+    margin-bottom: 20px;
+    font-family: $ff-brinnan-light;
+    color: white;
+  }
+}
+
+.button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid white;
+  font-family: $ff-brinnan-light;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+
+  &:hover {
+    background-color: #0b1b30c2;
+  }
+}
+
+.next-section {
+  display: block;
+  width: 1.5em;
+  margin: 30px auto 0 auto;
 }
