@@ -91,9 +91,34 @@ document.addEventListener("DOMContentLoaded", () => {
     true
   );
 
-  document.getElementById("contact-form").addEventListener("submit", (e) => {
+  contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
     // Form will be submitted by ReCAPTCHA's callback (fn onRecaptchaSuccess)
     grecaptcha.execute();
   });
+
+  // Show/Hide ReCAPTCHA's badge if form is in viewport
+  const handleIntersection = (entries, _observer) => {
+    const recaptchaBadge = document.querySelector(".grecaptcha-badge");
+
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Form is visible, display badge
+        recaptchaBadge.style.display = "initial";
+      } else {
+        recaptchaBadge.style.display = "none";
+      }
+    });
+  };
+
+  const observerOptions = {
+    root: null, // Use the viewport as the root
+    rootMargin: "0px", // No margin around the root
+    threshold: 0.2, // Trigger when 20% of the element is in the viewport
+  };
+  const observer = new IntersectionObserver(
+    handleIntersection,
+    observerOptions
+  );
+  observer.observe(contactForm);
 });
