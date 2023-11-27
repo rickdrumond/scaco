@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "Winkell-SuperWide";
+  src: url("../fonts/Winkell-SuperWide.otf") format("opentype"),
+    url("../fonts/Winkell-SuperWide.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$ff-winkell: "Winkell-SuperWide", Helvetica, Arial, sans-serif;

@@ -10,13 +10,13 @@
 body {
   height: 3000px; // TODO: remove
   background-color: $dark-blue;
-  // font-family: $ff-winkell;
+  font-family: $ff-winkell;
+  font-size: 18pt;
 }
 
 header {
   display: flex;
   columns: 2;
-  gap: 1em;
   flex-wrap: wrap;
 }
 
@@ -40,8 +40,14 @@ nav {
 
 #menu {
   display: none;
+  color: $logo-gray;
+  line-height: 2em;
 
   &.is-active {
     display: block;
+  }
+
+  ul {
+    margin: 10px;
   }
 }
