@@ -1,17 +1,17 @@
 @font-face {
-  font-family: "Winkell-SuperWide";
-  src: url("../fonts/Winkell-SuperWide.otf") format("opentype"),
-    url("../fonts/Winkell-SuperWide.otf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "AddingtonCF-DemiBoldItalic";
   src: url("../fonts/AddingtonCF-DemiBoldItalic.otf") format("opentype"),
     url("../fonts/AddingtonCF-DemiBoldItalic.otf") format("truetype");
   font-weight: normal;
   font-style: italic;
+}
+
+@font-face {
+  font-family: "Beliau";
+  src: url("../fonts/Beliau.otf") format("opentype"),
+    url("../fonts/Beliau.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
@@ -39,8 +39,17 @@
   font-style: normal;
 }
 
-$ff-winkell: "Winkell-SuperWide", Helvetica, Arial, sans-serif;
+@font-face {
+  font-family: "Winkell-SuperWide";
+  src: url("../fonts/Winkell-SuperWide.otf") format("opentype"),
+    url("../fonts/Winkell-SuperWide.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 $ff-addington: "AddingtonCF-DemiBoldItalic", "Times New Roman", Times, serif;
-$ff-brinnan: "Brinnan-Regular", Helvetica, Arial, sans-serif;
-$ff-brinnan-light: "Brinnan-Light", Helvetica, Arial, sans-serif;
+$ff-beliau: "Beliau", "Times New Roman", Times, serif;
 $ff-brinnan-bold: "Brinnan-Bold", Helvetica, Arial, sans-serif;
+$ff-brinnan-light: "Brinnan-Light", Helvetica, Arial, sans-serif;
+$ff-brinnan: "Brinnan-Regular", Helvetica, Arial, sans-serif;
+$ff-winkell: "Winkell-SuperWide", Helvetica, Arial, sans-serif;

@@ -104,9 +104,9 @@ document.addEventListener("DOMContentLoaded", () => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         // Form is visible, display badge
-        recaptchaBadge.style.display = "initial";
+        recaptchaBadge.style.visibility = "visible";
       } else {
-        recaptchaBadge.style.display = "none";
+        recaptchaBadge.style.visibility = "hidden";
       }
     });
   };

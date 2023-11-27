@@ -5,8 +5,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
 body {
-  height: 3000px; // TODO: remove
   background-color: $dark-blue;
   font-family: $ff-winkell;
   font-size: 18pt;
@@ -96,9 +99,19 @@ section {
     background-color: #0b1b30c2;
   }
 
-  &--solid {
+  &--blue {
     border-color: $dark-blue;
     background-color: $dark-blue;
+  }
+
+  &--green {
+    border-color: $aging-green;
+    background-color: $aging-green;
+  }
+
+  &--orange {
+    border-color: $posh-orange;
+    background-color: $posh-orange;
   }
 }
 
@@ -287,6 +300,56 @@ section {
 
     span {
       color: $pinkish-beige;
+    }
+  }
+}
+
+#projects {
+  background-color: $beach-sand;
+
+  h3 {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    color: $posh-orange;
+  }
+
+  p {
+    font-family: $ff-brinnan-light;
+  }
+
+  div:first-of-type {
+    border-bottom: 1px solid $posh-orange;
+    padding-bottom: 48px;
+  }
+
+  .development-map {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  .development-mosaic {
+    img {
+      margin-top: 24px;
+      margin-bottom: 24px;
+
+      &:first-of-type {
+        max-width: 100vw;
+        width: 100vw;
+        position: relative;
+        left: calc(-50vw + 50%);
+      }
+    }
+  }
+
+  .life-in-focus {
+    margin-bottom: 24px;
+    color: $posh-orange;
+    text-align: center;
+    text-transform: uppercase;
+
+    span {
+      font-family: $ff-beliau;
+      color: $dark-blue;
     }
   }
 }
