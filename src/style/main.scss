@@ -278,3 +278,17 @@ section {
     margin-top: 48px;
   }
 }
+
+#discover {
+  h2 {
+    margin-bottom: 48px;
+    font-family: $ff-brinnan;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+
+    span {
+      color: $pinkish-beige;
+    }
+  }
+}
