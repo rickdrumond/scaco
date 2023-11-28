@@ -1,0 +1,75 @@
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  height: $header-height;
+  display: flex;
+  columns: 2;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  border-bottom: 1px solid $logo-gray;
+  transition: background-color 0.2s ease;
+
+  #brand-link {
+    max-width: 486px;
+    height: 100%;
+    padding: $xs-padding;
+    display: flex;
+    align-items: center;
+  }
+
+  #menu-toggler {
+    width: 50px;
+    height: 100%;
+    margin-right: $xs-padding;
+    padding: $xs-padding;
+    border-left: 1px solid $logo-gray;
+
+    @screen md {
+      display: none;
+    }
+
+    .tham-inner {
+      background-color: $logo-gray;
+    }
+  }
+
+  #menu {
+    flex-basis: 100%;
+    flex-direction: row;
+    display: none;
+    color: $logo-gray;
+    line-height: 2em;
+    border-top: 1px solid $logo-gray;
+    background-color: $dark-blue;
+    font-family: $ff-winkell;
+    font-size: 0.8em;
+
+    @screen md {
+      display: block;
+      height: 100%;
+      background: none;
+      border-top: none;
+      border-left: 1px solid $logo-gray;
+    }
+
+    &.is-active {
+      display: block;
+    }
+
+    ul {
+      height: 100%;
+      padding: $xs-padding;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2em;
+
+      @screen md {
+        flex-direction: row;
+      }
+    }
+  }
+}

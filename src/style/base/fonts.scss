@@ -53,3 +53,12 @@ $ff-brinnan-bold: "Brinnan-Bold", Helvetica, Arial, sans-serif;
 $ff-brinnan-light: "Brinnan-Light", Helvetica, Arial, sans-serif;
 $ff-brinnan: "Brinnan-Regular", Helvetica, Arial, sans-serif;
 $ff-winkell: "Winkell-SuperWide", Helvetica, Arial, sans-serif;
+
+html {
+  font-size: 16pt;
+  font-family: $ff-brinnan-light;
+}
+
+h2 {
+  font-family: $ff-winkell;
+}

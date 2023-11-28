@@ -1,74 +1,33 @@
-@import "colors.module";
-@import "fonts.module";
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@import "base/colors";
+@import "base/fonts";
+@import "base/sizes";
+
+@import "components/components";
+@import "components/header";
+
 .grecaptcha-badge {
+  // Displayed when contact form is in view
   visibility: hidden;
 }
 
 body {
   background-color: $dark-blue;
-  font-family: $ff-winkell;
-  font-size: 18pt;
-}
-
-header {
-  position: fixed;
-  z-index: 99;
-  display: flex;
-  columns: 2;
-  flex-wrap: wrap;
-  border-bottom: 1px solid $logo-gray;
-  transition: background-color 0.2s ease;
-
-  #brand-link {
-    flex-basis: 80%;
-  }
-
-  #menu-toggler {
-    margin: auto;
-    width: 50px;
-
-    .tham-inner {
-      background-color: $logo-gray;
-    }
-  }
-
-  #menu {
-    flex-basis: 100%;
-    display: none;
-    color: $logo-gray;
-    line-height: 2em;
-    border-top: 1px solid $logo-gray;
-    background-color: $dark-blue;
-
-    &.is-active {
-      display: block;
-    }
-
-    ul {
-      margin: 10px;
-
-      li {
-        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-      }
-    }
-  }
 }
 
 section {
-  padding: 48px 18px 48px 18px;
+  padding: $lg-padding $xs-padding;
   // Prevent wrong anchor scroll position due to fixed header
-  scroll-margin-top: 64px;
+  scroll-margin-top: $header-height;
 }
 
 #cover {
-  padding-top: 76px;
+  padding-top: calc($header-height + $content-spacing);
   min-height: 100vh;
-  background: fixed url(../img/cover.png) left no-repeat;
+  background: url(../img/cover.png) fixed left/cover;
 
   h2 {
     font-size: 1.5em;
@@ -92,42 +51,6 @@ section {
     font-family: $ff-brinnan-light;
     color: white;
   }
-}
-
-.button {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  border: 1px solid white;
-  font-family: $ff-brinnan-light;
-  text-transform: uppercase;
-  text-align: center;
-  color: white;
-
-  &:hover {
-    background-color: #0b1b30c2;
-  }
-
-  &--blue {
-    border-color: $dark-blue;
-    background-color: $dark-blue;
-  }
-
-  &--green {
-    border-color: $aging-green;
-    background-color: $aging-green;
-  }
-
-  &--orange {
-    border-color: $posh-orange;
-    background-color: $posh-orange;
-  }
-}
-
-.next-section {
-  display: block;
-  width: 1.5em;
-  margin: 30px auto 0 auto;
 }
 
 #about {

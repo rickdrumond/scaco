@@ -1,0 +1,35 @@
+.button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid white;
+  font-family: $ff-brinnan-light;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+
+  &:hover {
+    background-color: #0b1b30c2;
+  }
+
+  &--blue {
+    border-color: $dark-blue;
+    background-color: $dark-blue;
+  }
+
+  &--green {
+    border-color: $aging-green;
+    background-color: $aging-green;
+  }
+
+  &--orange {
+    border-color: $posh-orange;
+    background-color: $posh-orange;
+  }
+}
+
+.next-section {
+  display: block;
+  width: 1.5em;
+  margin: 30px auto 0 auto;
+}
