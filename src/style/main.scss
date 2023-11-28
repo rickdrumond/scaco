@@ -131,13 +131,33 @@ p {
 #brand-values {
   background-color: $logo-gray;
 
+  @screen lg {
+    display: flex;
+    align-items: center;
+    gap: $lg-h-spacing;
+  }
+
+  > div {
+    &:first-of-type {
+      flex-basis: 30%;
+    }
+
+    &:last-of-type {
+      flex-grow: 1;
+    }
+  }
+
   h2 {
-    font-size: 1.9em;
+    font-size: 2rem;
     font-family: $ff-brinnan-bold;
     color: $light-blue;
     text-transform: uppercase;
     line-height: 1;
     margin-bottom: 24px;
+
+    @screen lg {
+      font-size: 3rem;
+    }
 
     span {
       font-family: $ff-brinnan;
