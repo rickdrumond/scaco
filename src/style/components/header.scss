@@ -18,6 +18,14 @@ header {
     padding: $xs-padding;
     display: flex;
     align-items: center;
+
+    @screen lg {
+      padding-left: 45px;
+    }
+
+    img {
+      max-height: 1.5em;
+    }
   }
 
   #menu-toggler {
@@ -47,12 +55,20 @@ header {
     font-family: $ff-winkell;
     font-size: 0.8em;
 
+    position: absolute;
+    top: 135px;
+    right: 0;
+    border: 1px solid $logo-gray;
+    border-top: none;
+
     @screen md {
       display: block;
       height: 100%;
       background: none;
-      border-top: none;
+      border: none;
       border-left: 1px solid $logo-gray;
+
+      position: static;
     }
 
     &.is-active {
@@ -69,6 +85,34 @@ header {
 
       @screen md {
         flex-direction: row;
+      }
+
+      @screen lg {
+        margin-left: 45px;
+      }
+
+      li {
+        border-bottom: 1px solid $logo-gray;
+
+        @screen md {
+          border: none;
+        }
+      }
+    }
+  }
+
+  .logo {
+    display: none;
+    height: 100%;
+    padding: calc($xs-padding * 2);
+    padding-right: 45px;
+
+    @screen lg {
+      display: flex;
+      align-items: center;
+
+      img {
+        max-height: 100%;
       }
     }
   }

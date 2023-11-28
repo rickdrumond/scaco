@@ -1,5 +1,6 @@
 .button {
   display: block;
+  max-width: 243px;
   width: 100%;
   padding: 10px;
   border: 1px solid white;
@@ -7,6 +8,12 @@
   text-transform: uppercase;
   text-align: center;
   color: white;
+  margin: 36px auto;
+
+  @screen md {
+    margin-left: 0;
+    margin-right: 0;
+  }
 
   &:hover {
     background-color: #0b1b30c2;
@@ -28,8 +35,28 @@
   }
 }
 
+.balance-is-a-lifestyle {
+  font-family: $ff-addington;
+  font-size: 2rem;
+  color: white;
+
+  span:first-of-type {
+    display: block;
+    margin-bottom: -0.9em;
+    font-family: $ff-winkell;
+    text-transform: uppercase;
+    color: $light-blue;
+  }
+
+  span:last-of-type {
+    font-size: 1.5em;
+  }
+}
+
 .next-section {
-  display: block;
-  width: 1.5em;
-  margin: 30px auto 0 auto;
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  width: 36px;
+  transform: translate(-50%);
 }

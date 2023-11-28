@@ -10,7 +10,7 @@
 @import "components/header";
 
 .grecaptcha-badge {
-  // Displayed when contact form is in view
+  // Displayed through JS when contact form is in view
   visibility: hidden;
 }
 
@@ -19,59 +19,88 @@ body {
 }
 
 section {
-  padding: $lg-padding $xs-padding;
+  padding: $xs-padding;
   // Prevent wrong anchor scroll position due to fixed header
   scroll-margin-top: $header-height;
+
+  @screen md {
+    padding: 54px 81px;
+  }
+
+  @screen lg {
+    padding: 135px 180px;
+  }
+}
+
+p {
+  margin-bottom: 27px;
 }
 
 #cover {
+  position: relative;
   padding-top: calc($header-height + $content-spacing);
+  padding-bottom: 81px;
   min-height: 100vh;
   background: url(../img/cover.png) fixed left/cover;
+  background-repeat: no-repeat;
 
-  h2 {
-    font-size: 1.5em;
-    color: $light-blue;
-  }
+  .container {
+    margin-left: 0;
+    max-width: 594px;
 
-  h3 {
-    margin-top: -0.9em;
-    margin-bottom: 0.5em;
-    color: white;
-    font-family: $ff-addington;
-    font-size: 1.6em;
+    @screen md {
+      margin-top: 198px;
+    }
 
-    span {
-      font-size: 1.5em;
+    @screen lg {
+      margin-top: 235px;
     }
   }
 
   p {
-    margin-bottom: 20px;
+    margin-top: 27px;
+    margin-bottom: 27px;
     font-family: $ff-brinnan-light;
     color: white;
   }
 }
 
 #about {
+  .container {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: $lg-padding;
+    align-items: end;
+    align-content: space-between;
+    border-left: 1px solid $logo-gray;
+
+    > div {
+      padding-right: calc($lg-padding * 3);
+      flex-basis: 80%;
+    }
+  }
+
   h2 {
     margin-bottom: 36px;
     color: $logo-gray;
   }
 
   p {
-    margin: 24px 0;
     font-family: $ff-brinnan;
     color: white;
   }
 
   aside {
-    text-transform: uppercase;
-    font-size: 1.2em;
-    line-height: 1.2;
+    margin-left: -1px;
+    padding: 1px;
+    border-left-style: outset;
+    background-color: $dark-blue;
 
     p {
       margin: 0;
+      text-transform: uppercase;
+      font-size: 1.2em;
+      line-height: 1.2;
 
       &:first-child {
         color: $pinkish-beige;
@@ -141,8 +170,7 @@ section {
 }
 
 #get-in-touch {
-  max-width: 100vw;
-  width: 100vw;
+  width: 100%;
   height: 40vh;
   position: relative;
   left: calc(-50vw + 50%);
@@ -282,6 +310,12 @@ section {
         width: 100vw;
         position: relative;
         left: calc(-50vw + 50%);
+
+        @screen md {
+          max-width: 100%;
+          width: 100%;
+          position: static;
+        }
       }
     }
   }
