@@ -25,7 +25,7 @@ const submitContactForm = (recaptchaToken) => {
     ReCAPTCHA: recaptchaToken,
   };
 
-  debugger;
+  debugger; // FIXME: remove
 
   fetch(form.action, {
     method: "POST",
@@ -70,7 +70,19 @@ document.addEventListener("click", (e) => {
   }
 });
 
+let header;
+
+const handleScroll = (_e) => {
+  if (!header) return;
+
+  header.style.backgroundColor =
+    window.scrollY > 100 ? "#0b1b30" : "transparent";
+};
+document.addEventListener("scroll", handleScroll);
+
 document.addEventListener("DOMContentLoaded", () => {
+  header = document.querySelector("header");
+
   const menuToggler = document.getElementById("menu-toggler");
   const menu = document.getElementById("menu");
   const contactForm = document.getElementById("contact-form");

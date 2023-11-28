@@ -16,9 +16,13 @@ body {
 }
 
 header {
+  position: fixed;
+  z-index: 99;
   display: flex;
   columns: 2;
   flex-wrap: wrap;
+  border-bottom: 1px solid $logo-gray;
+  transition: background-color 0.2s ease;
 
   #brand-link {
     flex-basis: 80%;
@@ -38,6 +42,8 @@ header {
     display: none;
     color: $logo-gray;
     line-height: 2em;
+    border-top: 1px solid $logo-gray;
+    background-color: $dark-blue;
 
     &.is-active {
       display: block;
@@ -55,9 +61,12 @@ header {
 
 section {
   padding: 48px 18px 48px 18px;
+  // Prevent wrong anchor scroll position due to fixed header
+  scroll-margin-top: 64px;
 }
 
 #cover {
+  padding-top: 76px;
   min-height: 100vh;
   background: fixed url(../img/cover.png) left no-repeat;
 
