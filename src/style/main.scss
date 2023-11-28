@@ -353,3 +353,32 @@ section {
     }
   }
 }
+
+#finale {
+  height: 100vh;
+  background: local url(../img/cat.png) center;
+  position: relative;
+
+  div {
+    position: absolute;
+    bottom: 1em;
+  }
+
+  p {
+    font-family: $ff-brinnan;
+    text-transform: uppercase;
+    color: white;
+
+    &:first-of-type {
+      color: $light-blue;
+    }
+
+    &:last-of-type {
+      margin-left: 1em;
+    }
+
+    span {
+      color: $pinkish-beige;
+    }
+  }
+}

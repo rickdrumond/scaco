@@ -100,6 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Show/Hide ReCAPTCHA's badge if form is in viewport
   const handleIntersection = (entries, _observer) => {
     const recaptchaBadge = document.querySelector(".grecaptcha-badge");
+    if (!recaptchaBadge) return;
 
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
