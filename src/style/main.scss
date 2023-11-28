@@ -19,7 +19,8 @@ body {
   background-color: $dark-blue;
 }
 
-section {
+section,
+footer {
   padding: $xs-v-spacing $xs-h-spacing;
   // Prevent wrong anchor scroll position due to fixed header
   scroll-margin-top: $header-height;
@@ -51,10 +52,6 @@ p {
 
     @screen md {
       margin-top: 198px;
-    }
-
-    @screen lg {
-      margin-top: 235px;
     }
   }
 
@@ -144,7 +141,7 @@ p {
     }
 
     &:last-of-type {
-      flex-grow: 1;
+      // flex-grow: 1;
     }
   }
 
@@ -440,26 +437,51 @@ p {
 }
 
 footer {
-  padding: 18px;
-  color: $logo-gray;
+  position: relative;
+  color: white;
 
-  > * {
-    margin-bottom: 48px;
+  .logo {
+    position: absolute;
+    // padding: inherit;
+    top: $xs-v-spacing;
+    right: $xs-h-spacing;
+    width: 3rem;
+
+    @screen lg {
+      top: $lg-v-spacing;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 5rem;
+    }
   }
 
-  nav {
+  .container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 
-    img {
-      max-width: 2em;
-      height: 100%;
+    @screen lg {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  nav ul {
+    font-family: $ff-winkell;
+
+    li {
+      margin-bottom: 1rem;
     }
   }
 
   .social {
     display: flex;
     justify-content: space-around;
+    margin-bottom: 1rem;
+
+    @screen lg {
+      justify-content: flex-start;
+    }
 
     img {
       max-height: 3em;
@@ -471,33 +493,48 @@ footer {
     font-style: normal;
   }
 
-  .balance-is-a-lifestyle {
-    font-size: 1.6em;
-    text-align: center;
-    line-height: 0.8;
-    color: $light-blue;
+  .brand-container {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
 
-    span {
-      font-family: $ff-addington;
-      color: white;
-      font-size: 1.75em;
+    @screen lg {
+      flex-direction: row-reverse;
+      align-items: flex-end;
+      gap: 0rem;
 
-      &:first-of-type {
-        font-size: 0.9em;
+      > * {
+        align-items: stretch;
+        flex: 1;
+        max-width: 100%;
+        text-align: center;
+
+        * {
+          margin: 0 auto;
+        }
       }
+    }
+
+    :last-child {
+      flex-grow: 2;
     }
   }
 
   .fifth-ave-brand {
-    max-width: 60%;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 180px;
   }
 
   #privacy-policy-link {
-    display: block;
-    width: 100%;
     text-decoration: underline;
+    display: block;
+    text-align: center;
+
+    @screen lg {
+      display: inline;
+      margin-left: 1rem;
+    }
   }
 
   #privacy-policy-link,

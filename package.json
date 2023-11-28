@@ -5,7 +5,8 @@
   "source": "src/index.html",
   "browserlist": "> 0.5%, last 2 versions, Firefox ESR, not dead",
   "scripts": {
-    "dev": "parcel"
+    "dev": "parcel",
+    "build": "parcel build"
   },
   "author": "Rick Drumond",
   "license": "ISC",
