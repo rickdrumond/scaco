@@ -19,21 +19,21 @@ body {
 }
 
 section {
-  padding: $xs-padding;
+  padding: $xs-v-spacing $xs-h-spacing;
   // Prevent wrong anchor scroll position due to fixed header
   scroll-margin-top: $header-height;
 
   @screen md {
-    padding: 54px 81px;
+    padding: $md-v-spacing $md-h-spacing;
   }
 
   @screen lg {
-    padding: 135px 180px;
+    padding: $lg-v-spacing $lg-h-spacing;
   }
 }
 
 p {
-  margin-bottom: 27px;
+  margin-bottom: $content-spacing;
 }
 
 #cover {
@@ -66,35 +66,49 @@ p {
 }
 
 #about {
+  @screen lg {
+    background: url(../img/brand-v.png) no-repeat right;
+  }
   .container {
     display: flex;
-    flex-direction: row-reverse;
-    gap: $lg-padding;
+    flex-direction: column;
+    gap: $xs-v-spacing;
     align-items: end;
     align-content: space-between;
-    border-left: 1px solid $logo-gray;
 
-    > div {
-      padding-right: calc($lg-padding * 3);
-      flex-basis: 80%;
+    @screen lg {
+      flex-direction: row-reverse;
+      border-left: 1px solid $logo-gray;
+
+      > div {
+        padding-right: $lg-h-spacing;
+        flex-basis: 80%;
+      }
     }
   }
 
   h2 {
-    margin-bottom: 36px;
+    margin-bottom: 2em;
+    font-size: 1.5rem;
     color: $logo-gray;
   }
 
   p {
     font-family: $ff-brinnan;
     color: white;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 
   aside {
-    margin-left: -1px;
-    padding: 1px;
-    border-left-style: outset;
-    background-color: $dark-blue;
+    @screen lg {
+      margin-left: -2px;
+      padding-top: 0.5em;
+      border-left-style: outset;
+      background-color: $dark-blue;
+    }
 
     p {
       margin: 0;
