@@ -8,6 +8,7 @@
 
 @import "components/components";
 @import "components/header";
+@import "components/contact-form";
 
 .grecaptcha-badge {
   // Displayed through JS when contact form is in view
@@ -203,97 +204,50 @@ p {
   }
 }
 
-#get-in-touch {
-  width: 100%;
-  height: 40vh;
-  position: relative;
-  left: calc(-50vw + 50%);
-  background-attachment: scroll;
-  background-image: url(../img/woman-with-dog.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 #contact {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
   background-color: $light-blue;
   font-family: $ff-brinnan-light;
+
+  @screen lg {
+    flex-direction: row;
+  }
+
+  > div {
+    &:first-of-type {
+      height: auto;
+      flex-basis: 100vh;
+      background: url(../img/woman-with-dog.png) center/cover no-repeat;
+      background-position: 70% top;
+
+      @screen lg {
+        flex-basis: 45%;
+      }
+    }
+
+    &:last-of-type {
+      flex-basis: 55%;
+      padding: $xs-v-spacing $xs-h-spacing 0;
+
+      @screen md {
+        padding: calc($md-v-spacing / 2);
+        padding-bottom: 0;
+      }
+
+      @screen lg {
+        padding: calc($lg-v-spacing / 2);
+        padding-bottom: 0;
+      }
+    }
+  }
 
   h2 {
     margin-bottom: 24px;
     font-family: $ff-brinnan-bold;
     color: $dark-blue;
     text-transform: uppercase;
-  }
-}
-
-#contact-form {
-  margin-top: 24px;
-
-  > label {
-    display: block;
-    margin-top: 24px;
-    margin-bottom: 12px;
-  }
-
-  input[type="text"],
-  input[type="tel"],
-  input[type="email"],
-  select {
-    display: block;
-    width: 100%;
-    background: none;
-    border-bottom: 1px solid $dark-blue;
-    margin-top: 12px;
-
-    &:focus-visible {
-      outline: none;
-      border-bottom-width: 3px;
-    }
-
-    // Disable autofill background on Chrome
-    // https://stackoverflow.com/a/68240841
-    &:-webkit-autofill,
-    &:-webkit-autofill:focus {
-      transition: background-color 0s 600000s, color 0s 600000s;
-    }
-  }
-
-  input[type="checkbox"],
-  input[type="radio"] {
-    width: 1.2em;
-    height: 1.2em;
-    border: 2px solid $dark-blue;
-    appearance: none;
-    background-color: none;
-
-    &:checked {
-      background-color: $dark-blue;
-    }
-  }
-
-  .checkbox-section {
-    margin-top: 24px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid $dark-blue;
-
-    p {
-      font-family: $ff-brinnan;
-      margin-bottom: 12px;
-    }
-
-    label {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3em;
-      line-height: 1.5;
-      vertical-align: middle;
-      margin-right: 0.5em;
-    }
-  }
-
-  button[type="submit"] {
-    margin-top: 48px;
   }
 }
 
