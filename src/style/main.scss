@@ -208,6 +208,19 @@ section {
   }
 }
 
+#get-in-touch {
+  max-width: 100vw;
+  width: 100vw;
+  height: 40vh;
+  position: relative;
+  left: calc(-50vw + 50%);
+  background-attachment: scroll;
+  background-image: url(../img/woman-with-dog.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 #contact {
   background-color: $light-blue;
   font-family: $ff-brinnan-light;
