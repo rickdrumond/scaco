@@ -280,9 +280,15 @@ p {
 #projects {
   background-color: $beach-sand;
 
+  .brand {
+    margin-top: 4em;
+    margin-bottom: 4em;
+  }
+
   h3 {
     margin-top: 24px;
     margin-bottom: 24px;
+    font-family: $ff-winkell;
     color: $posh-orange;
   }
 
@@ -290,45 +296,104 @@ p {
     font-family: $ff-brinnan-light;
   }
 
-  div:first-of-type {
-    border-bottom: 1px solid $posh-orange;
-    padding-bottom: 48px;
-  }
+  .container {
+    display: flex;
+    flex-direction: column;
 
-  .development-map {
-    margin-top: 24px;
-    margin-bottom: 24px;
+    @screen lg {
+      flex-direction: row;
+      gap: $lg-h-spacing;
+
+      > :last-child {
+        flex-basis: 40%;
+        flex-shrink: 0;
+      }
+    }
+
+    .development-info {
+      > :first-child {
+        border-bottom: 1px solid $posh-orange;
+
+        @screen lg {
+          padding-bottom: $lg-v-spacing;
+          margin-bottom: $lg-v-spacing;
+        }
+      }
+
+      .homes-and-bedrooms {
+        display: flex;
+        flex-direction: column;
+
+        @screen lg {
+          flex-direction: row;
+          gap: $lg-h-spacing;
+        }
+      }
+    }
   }
 
   .development-mosaic {
-    img {
-      margin-top: 24px;
-      margin-bottom: 24px;
+    > img {
+      max-width: 100vw;
+      width: 100vw;
+      position: relative;
+      left: calc(-50vw + 50%);
 
-      &:first-of-type {
-        max-width: 100vw;
-        width: 100vw;
-        position: relative;
-        left: calc(-50vw + 50%);
+      @screen md {
+        max-width: 100%;
+        width: 100%;
+        position: static;
+      }
+    }
 
-        @screen md {
-          max-width: 100%;
-          width: 100%;
-          position: static;
+    .container {
+      width: 100%;
+      margin-top: $xs-v-spacing;
+      margin-bottom: $xs-v-spacing;
+      display: flex;
+      flex-direction: column;
+      gap: $xs-v-spacing;
+
+      @screen lg {
+        flex-direction: row;
+
+        > * {
+          max-width: 30%;
+          height: auto;
         }
       }
     }
   }
 
   .life-in-focus {
-    margin-bottom: 24px;
-    color: $posh-orange;
-    text-align: center;
-    text-transform: uppercase;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
 
-    span {
-      font-family: $ff-beliau;
-      color: $dark-blue;
+    @screen lg {
+      flex-direction: row;
+    }
+
+    p {
+      height: 100%;
+      margin: 0;
+      color: $posh-orange;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      font-weight: bold;
+
+      span {
+        font-family: $ff-beliau;
+        font-weight: normal;
+        color: $dark-blue;
+      }
+    }
+
+    .button {
+      margin: 0;
     }
   }
 }
