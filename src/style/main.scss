@@ -374,7 +374,7 @@ section {
 
   div {
     position: absolute;
-    bottom: 1em;
+    bottom: 3em;
   }
 
   p {
@@ -393,5 +393,74 @@ section {
     span {
       color: $pinkish-beige;
     }
+  }
+}
+
+footer {
+  padding: 18px;
+  color: $logo-gray;
+
+  > * {
+    margin-bottom: 48px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      max-width: 2em;
+      height: 100%;
+    }
+  }
+
+  .social {
+    display: flex;
+    justify-content: space-around;
+
+    img {
+      max-height: 3em;
+    }
+  }
+
+  address {
+    font-family: $ff-brinnan-light;
+    font-style: normal;
+  }
+
+  .balance-is-a-lifestyle {
+    font-size: 1.6em;
+    text-align: center;
+    line-height: 0.8;
+    color: $light-blue;
+
+    span {
+      font-family: $ff-addington;
+      color: white;
+      font-size: 1.75em;
+
+      &:first-of-type {
+        font-size: 0.9em;
+      }
+    }
+  }
+
+  .fifth-ave-brand {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #privacy-policy-link {
+    display: block;
+    width: 100%;
+    text-decoration: underline;
+  }
+
+  #privacy-policy-link,
+  #copyright {
+    font-family: $ff-brinnan-light;
+    color: white;
+    text-align: center;
   }
 }
