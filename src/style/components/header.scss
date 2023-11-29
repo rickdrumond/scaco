@@ -1,0 +1,121 @@
+header {
+  position: fixed;
+  width: 100%;
+  padding: 0 $xs-h-spacing;
+  z-index: 99;
+  height: $header-height;
+  display: flex;
+  columns: 2;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  border-bottom: 1px solid $logo-gray;
+  transition: background-color 0.2s ease;
+
+  @screen lg {
+    padding: 0 $header-h-spacing;
+  }
+
+  #brand-link {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 350px;
+    }
+  }
+
+  #menu-toggler {
+    width: 50px;
+    height: 100%;
+    padding: $xs-v-spacing $xs-h-spacing;
+    border-left: 1px solid $logo-gray;
+
+    @screen md {
+      display: none;
+    }
+
+    .tham-inner {
+      background-color: $logo-gray;
+    }
+  }
+
+  #menu {
+    flex-basis: 100%;
+    flex-direction: row;
+    display: none;
+    color: $logo-gray;
+    line-height: 2em;
+    background-color: $dark-blue;
+    font-family: $ff-winkell;
+    font-size: 0.65rem;
+    letter-spacing: 0.12rem;
+
+    position: absolute;
+    top: $header-height;
+    right: 0;
+    border: 1px solid $logo-gray;
+    border-top: none;
+    border-right: none;
+
+    @screen md {
+      display: block;
+      height: 100%;
+      background: none;
+      border: none;
+      border-left: 1px solid $logo-gray;
+
+      position: static;
+    }
+
+    &.is-active {
+      display: block;
+    }
+
+    ul {
+      height: 100%;
+      padding: $xs-v-spacing $xs-h-spacing;
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+
+      @screen md {
+        flex-direction: row;
+        margin-right: 3rem;
+        text-align: left;
+      }
+
+      @screen lg {
+        margin-left: 45px;
+      }
+
+      li {
+        border-bottom: 1px solid $logo-gray;
+        width: 100%;
+
+        @screen md {
+          border: none;
+          width: auto;
+        }
+      }
+    }
+  }
+
+  .logo {
+    display: none;
+    height: 100%;
+
+    @screen lg {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: $s-logo-width;
+      }
+    }
+  }
+}

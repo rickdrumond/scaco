@@ -1,0 +1,79 @@
+#contact-form {
+  #contact-terms {
+    // FIXME: remove
+    display: none;
+  }
+
+  > label {
+    display: block;
+    margin-top: 24px;
+    margin-bottom: 12px;
+  }
+
+  .checkbox-section > * {
+    @screen lg {
+      display: inline-block;
+      margin-right: 1em;
+    }
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  select {
+    display: block;
+    width: 100%;
+    background: none;
+    border-bottom: 1px solid $dark-blue;
+    margin-top: 12px;
+
+    &:focus-visible {
+      outline: none;
+      border-bottom-width: 3px;
+    }
+
+    // Disable autofill background on Chrome
+    // https://stackoverflow.com/a/68240841
+    &:-webkit-autofill,
+    &:-webkit-autofill:focus {
+      transition: background-color 0s 600000s, color 0s 600000s;
+    }
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    width: 1.2em;
+    height: 1.2em;
+    border: 2px solid $dark-blue;
+    appearance: none;
+    background-color: none;
+
+    &:checked {
+      background-color: $dark-blue;
+    }
+  }
+
+  .checkbox-section {
+    margin-top: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid $dark-blue;
+
+    p {
+      font-family: $ff-brinnan;
+      margin-bottom: 12px;
+    }
+
+    label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3em;
+      line-height: 1.5;
+      vertical-align: middle;
+      margin-right: 0.5em;
+    }
+  }
+
+  button[type="submit"] {
+    margin-top: 1em;
+  }
+}

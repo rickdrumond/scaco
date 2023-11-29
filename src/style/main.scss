@@ -1,0 +1,446 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "base/colors";
+@import "base/fonts";
+@import "base/sizes";
+
+@import "components/components";
+@import "components/header";
+@import "components/contact-form";
+@import "components/footer";
+@import "components/privacy-policy";
+
+.grecaptcha-badge {
+  // Displayed through JS when contact form is in view
+  visibility: hidden;
+}
+
+body {
+  background-color: $dark-blue;
+}
+
+section {
+  padding: $xs-v-spacing $xs-h-spacing;
+  // Prevent wrong anchor scroll position due to fixed header
+  scroll-margin-top: $header-height;
+
+  @screen md {
+    padding: $md-v-spacing $md-h-spacing;
+  }
+
+  @screen lg {
+    padding: $lg-v-spacing $lg-h-spacing;
+  }
+}
+
+p {
+  margin-bottom: $content-spacing;
+}
+
+#cover {
+  position: relative;
+  padding-top: calc($header-height + $content-spacing);
+  padding-bottom: 81px;
+  min-height: 100vh;
+  background: url(../img/cover.png) 30% / cover no-repeat fixed;
+
+  @screen lg {
+    background-size: cover;
+    background-position: auto 10%;
+  }
+
+  .container {
+    margin-left: 0;
+
+    p:last-of-type {
+      max-width: 594px;
+      width: 70%;
+      margin-top: 27px;
+      margin-bottom: 27px;
+      font-family: $ff-brinnan-light;
+      color: white;
+    }
+
+    @screen md {
+      margin-top: 198px;
+    }
+  }
+}
+
+#about {
+  @screen lg {
+    // Align with header logo
+    background: url(../img/brand-v.png) calc(100% - $header-h-spacing) no-repeat;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: $xs-v-spacing;
+    align-items: end;
+    align-content: space-between;
+
+    @screen lg {
+      flex-direction: row-reverse;
+      border-left: 1px solid $logo-gray;
+
+      > div {
+        flex: 0 0 70%;
+      }
+    }
+  }
+
+  h2 {
+    margin-bottom: 2em;
+    font-size: 1.5rem;
+    color: $logo-gray;
+  }
+
+  p {
+    font-family: $ff-brinnan;
+    color: white;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  aside {
+    @screen lg {
+      margin-left: -2px;
+      padding-top: 0.5em;
+      border-left-style: outset;
+      background-color: $dark-blue;
+    }
+
+    p {
+      margin: 0;
+      text-transform: uppercase;
+      font-size: 1.2em;
+      line-height: 1.2;
+
+      &:first-child {
+        color: $pinkish-beige;
+      }
+    }
+
+    img {
+      max-height: 1.5em;
+      margin-top: 1em;
+    }
+  }
+}
+
+#brand-values {
+  background-color: $logo-gray;
+
+  @screen lg {
+    display: flex;
+    align-items: center;
+    gap: $lg-h-spacing;
+
+    > div {
+      &:first-of-type {
+        flex: 0 0 30%;
+      }
+
+      &:last-of-type {
+        flex: 0 0 calc(70% - $lg-h-spacing);
+      }
+    }
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-family: $ff-brinnan-bold;
+    color: $light-blue;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 24px;
+
+    @screen lg {
+      font-size: 3rem;
+    }
+
+    span {
+      font-family: $ff-brinnan;
+      color: $dark-blue;
+    }
+  }
+
+  h3 {
+    margin-bottom: 24px;
+    font-family: $ff-brinnan;
+    color: $dark-blue;
+  }
+
+  details {
+    border-bottom: 1px solid $dark-blue;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    font-family: $ff-brinnan;
+    color: $dark-blue;
+
+    &:first-of-type {
+      border-top: 1px solid $dark-blue;
+    }
+
+    summary {
+      display: flex;
+      align-items: center;
+      font-family: $ff-brinnan-bold;
+      list-style: none;
+      cursor: pointer;
+
+      &::after {
+        margin-left: auto;
+        content: "+";
+        font-size: 2em;
+        font-family: $ff-brinnan-light;
+      }
+    }
+
+    &[open] summary::after {
+      content: "-";
+    }
+  }
+}
+
+#contact {
+  scroll-margin-top: calc($header-height - 100vh);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: $light-blue;
+  font-family: $ff-brinnan-light;
+
+  @screen lg {
+    scroll-margin-top: $header-height;
+    flex-direction: row;
+  }
+
+  > div {
+    &:first-of-type {
+      height: auto;
+      flex-basis: 100vh;
+      background: url(../img/woman-with-dog.png) center/cover no-repeat;
+      background-position: 70% top;
+
+      @screen lg {
+        flex-basis: 45%;
+      }
+    }
+
+    &:last-of-type {
+      flex-basis: 55%;
+      padding: $xs-v-spacing $xs-h-spacing 0;
+
+      @screen md {
+        padding: calc($md-v-spacing / 2);
+        padding-bottom: 0;
+      }
+
+      @screen lg {
+        padding: calc($lg-v-spacing / 2);
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  h2 {
+    margin-bottom: 24px;
+    font-family: $ff-brinnan-bold;
+    color: $dark-blue;
+    text-transform: uppercase;
+  }
+}
+
+#discover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+
+  @screen lg {
+    flex-direction: row;
+  }
+
+  h2 {
+    font-family: $ff-brinnan;
+    color: white;
+    text-transform: uppercase;
+
+    span {
+      color: $pinkish-beige;
+    }
+  }
+
+  .button {
+    margin: 0;
+  }
+}
+
+#projects {
+  background-color: $beach-sand;
+
+  .brand {
+    margin-top: 4em;
+    margin-bottom: 4em;
+  }
+
+  h3 {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    font-family: $ff-winkell;
+    color: $posh-orange;
+  }
+
+  p {
+    font-family: $ff-brinnan-light;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+
+    @screen lg {
+      flex-direction: row;
+      gap: $lg-h-spacing;
+
+      > :last-child {
+        flex-basis: 40%;
+        flex-shrink: 0;
+      }
+    }
+
+    .development-info {
+      > :first-child {
+        border-bottom: 1px solid $posh-orange;
+
+        @screen lg {
+          padding-bottom: $lg-v-spacing;
+          margin-bottom: $lg-v-spacing;
+        }
+      }
+
+      .homes-and-bedrooms {
+        display: flex;
+        flex-direction: column;
+
+        @screen lg {
+          flex-direction: row;
+          gap: $lg-h-spacing;
+        }
+      }
+    }
+  }
+
+  .development-mosaic {
+    > img {
+      max-width: 100vw;
+      width: 100vw;
+      position: relative;
+      left: calc(-50vw + 50%);
+
+      @screen md {
+        max-width: 100%;
+        width: 100%;
+        position: static;
+      }
+    }
+
+    .container {
+      width: 100%;
+      margin-top: $xs-v-spacing;
+      margin-bottom: $xs-v-spacing;
+      display: flex;
+      flex-direction: column;
+      gap: $xs-v-spacing;
+
+      @screen lg {
+        flex-direction: row;
+
+        > * {
+          max-width: 30%;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .life-in-focus {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+
+    @screen lg {
+      flex-direction: row;
+    }
+
+    p {
+      height: 100%;
+      margin: 0;
+      color: $posh-orange;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      font-weight: bold;
+
+      span {
+        font-family: $ff-beliau;
+        font-weight: normal;
+        color: $dark-blue;
+      }
+    }
+
+    .button {
+      margin: 0;
+    }
+  }
+}
+
+#finale {
+  height: 100vh;
+  background: local url(../img/cat.png) center/cover no-repeat;
+  background-position: 60% top;
+  position: relative;
+
+  div {
+    position: absolute;
+    bottom: 3em;
+    right: $xs-h-spacing;
+
+    @screen lg {
+      right: $lg-h-spacing;
+    }
+  }
+
+  p {
+    font-family: $ff-brinnan;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: white;
+
+    @screen lg {
+      font-size: 2rem;
+    }
+
+    &:first-of-type {
+      margin-bottom: 0;
+      color: $light-blue;
+    }
+
+    &:last-of-type {
+      margin-left: 1em;
+    }
+
+    span {
+      color: $pinkish-beige;
+    }
+  }
+}

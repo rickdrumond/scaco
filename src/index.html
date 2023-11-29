@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scale Projects</title>
+    <link rel="stylesheet" href="style/main.scss" />
+    <script type="module" src="js/main.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+  <body>
+    <header>
+      <a href="/" id="brand-link">
+        <img src="img/brand.png" alt="Scale Projects brand" />
+      </a>
+      <nav id="menu">
+        <ul>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="menu-toggler" class="tham tham-e-squeeze tham-w-8">
+        <div class="tham-box">
+          <div class="tham-inner"></div>
+        </div>
+      </button>
+      <div class="logo">
+        <img src="img/logo.png" alt="Scale logo" />
+      </div>
+    </header>
+    <main>
+      <section id="cover">
+        <div class="container">
+          <div class="balance-is-a-lifestyle">
+            <span>Balance</span> <span>is a</span> <span>lifestyle</span>
+          </div>
+          <p>
+            At Scale Projects, we are dedicated to building inclusive
+            communities that foster a sense of belonging among real people. By
+            prioritising collaborative designs and sustainable infrastructure,
+            we aim to create vibrant neighbourhoods that support the needs and
+            aspirations of our residents.
+          </p>
+          <a href="#contact" class="button">Contact</a>
+        </div>
+        <a href="#about" class="next-section">
+          <img src="svg/down-arrow.svg" alt="More..." />
+        </a>
+      </section>
+      <section id="about">
+        <div class="container">
+          <div>
+            <h2>About</h2>
+            <p>
+              At Scale Projects, we believe in more than just constructing
+              buildings; we are memory-makers and future builders driven by a
+              commitment to creating homes for everyone to find a place they can
+              call their own. Our brand's communication is anchored in genuine
+              care, empathy, and community, and we add a touch of fun and joy to
+              every step of the journey.
+            </p>
+            <p>
+              Scale Projects embodies this dedication to providing spaces where
+              cherished memories are made, while ensuring that safety and trust
+              are at the core of everything we build. Our focus goes beyond mere
+              construction; it's about nurturing dreams, facilitating a better
+              future for all, and infusing every home with the promise of peace
+              of mind.
+            </p>
+            <p>
+              No matter the situation in life, with a Scale home, you can trust
+              that you'll find security, joy, and the peace of mind you deserve.
+              We ensure transparency, instill confidence, and approach our work
+              with humility and a sense of light-heartedness.
+            </p>
+            <p>
+              For us, it's not about a quick flip; it's about crafting a
+              narrative where our homeowners can create a lasting legacy filled
+              with laughter, joy, and a bright outlook on life. We are not just
+              builders; we are storytellers of the future, where each home
+              becomes a chapter in the story of cherished memories, trust, and a
+              brighter tomorrow.
+            </p>
+          </div>
+          <aside>
+            <p>Life is real, and so are scale projects</p>
+            <p>Real projects for real people.</p>
+            <img src="img/logo.png" alt="Scale logo" />
+          </aside>
+        </div>
+      </section>
+      <section id="brand-values">
+        <div>
+          <h2><span>Our</span><br />Brand Values</h2>
+          <h3>
+            We believe in strong, real and thriving connections. These are the
+            values that guide us.
+          </h3>
+        </div>
+        <div>
+          <details>
+            <summary>INTEGRITY and WORK ETHIC</summary>
+            “There is no way to do the right thing in a wrong way.”
+          </details>
+          <details>
+            <summary>LOYALTY and TRUST</summary>
+            “We believe that loyalty and trust are the keys to lasting
+            connections.”
+          </details>
+          <details>
+            <summary>HONESTY and TRANSPARENCY</summary>
+            “Clear paths, strong bonds: the foundation of thriving
+            relationships.”
+          </details>
+          <details>
+            <summary>SIMPLICITY and JOY</summary>
+            “Simplicity is the ultimate sophistication, and joy is the essence
+            of life.”
+          </details>
+        </div>
+      </section>
+      <section id="contact">
+        <div></div>
+        <div>
+          <h2>Get in touch</h2>
+          <p>
+            At Scale Projects, we have several communities in various stages of
+            design, development or construction at any given time. Register with
+            us to stay up to date on the latest news.
+          </p>
+          <form
+            action="https://scali-landingpage.vercel.app/api/enviar-formulario"
+            method="post"
+            id="contact-form"
+          >
+            <label>
+              First name*
+              <input
+                type="text"
+                name="fname"
+                autocomplete="given-name"
+                required
+              />
+            </label>
+            <label>
+              Last name*
+              <input
+                type="text"
+                name="lname"
+                autocomplete="family-name"
+                required
+              />
+            </label>
+            <label>
+              E-mail*
+              <input type="email" name="email" required autocomplete="email" />
+            </label>
+            <label>
+              Phone*
+              <input type="tel" name="phone" autocomplete="tel" required />
+            </label>
+            <label>
+              City of residence*
+              <input
+                type="text"
+                name="city"
+                autocomplete="address-level3"
+                required
+              />
+            </label>
+            <label>
+              How did you hear about us?
+              <select name="hearAbout" required>
+                <option value=" "></option>
+                <option value="Livabl">Livabl</option>
+                <option value="Facebook/Instagram">Facebook/Instagram</option>
+                <option value="Google">Google</option>
+                <option value="Fifth Ave">Fifth Ave</option>
+                <option value="Newspaper">Newspaper</option>
+                <option value="Radio">Radio</option>
+                <option value="Print ads">Print ads</option>
+                <option value="Signage">Signage</option>
+                <option value="Realtor">Realtor</option>
+                <option value="Family/Friends">Family/Friends</option>
+                <option value="Other">Other</option>
+              </select>
+            </label>
+            <div class="checkbox-section">
+              <p>ARE YOU A REALTOR?</p>
+              <label class="flex items-center gap-1">
+                <input type="radio" name="areYouRealtor" value="yes" />
+                Yes
+              </label>
+              <label class="flex items-center gap-1">
+                <input type="radio" name="areYouRealtor" value="no" />
+                No
+              </label>
+            </div>
+            <div class="checkbox-section">
+              <p>HOW WOULD YOU LIKE TO BE CONTACTED?</p>
+              <label>
+                <input type="checkbox" name="contact-method" value="Phone" />
+                Phone
+              </label>
+              <label>
+                <input type="checkbox" name="contact-method" value="E-mail" />
+                E-mail
+              </label>
+              <label>
+                <input type="checkbox" name="contact-method" value="Text" />
+                Text
+              </label>
+            </div>
+            <label>
+              <input
+                type="checkbox"
+                name="agreeToConsent"
+                value="yes"
+                style="margin-bottom: -5px"
+                required
+              />
+              Yes, I consent to receiving electronic messages from Scale
+              Projects and Fifth Avenue Real Estate Marketing Ltd. with updates
+              on Scale and other projects that may be of interest to me. If you
+              wish to stop receiving this information at any time, simply check
+              unsubscribe at the bottom of any email received or contact
+              homes@scaleliving.ca with unsubscribe in the subject line.
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                name="agreeToTerms"
+                value="yes"
+                style="margin-bottom: -5px"
+                required
+              />
+              <!-- FIXME: add URL -->
+              I agree to the terms: The information you provide will be kept
+              confidential and used only by Fifth Avenue Real Estate Marketing
+              to enhance your home buying experience and the level of service
+              you receive. The members of our Sales Team are all licensed Real
+              Estate Professionals with Fifth Avenue Real Estate Marketing and
+              therefore are unable to provide representation to potential
+              buyers. To learn more about various forms of Realtor
+              representation and the choices available to you, please
+              <a href="javascript:alert('TBD')">click here</a>.
+            </label>
+            <div
+              class="g-recaptcha"
+              data-sitekey="6Lc2tRspAAAAAMLNy6B2O23BagKcxv7DkrXMKrd5"
+              data-callback="onRecaptchaSuccess"
+              data-size="invisible"
+            ></div>
+            <button type="submit" class="button button--blue">Submit</button>
+          </form>
+        </div>
+      </section>
+      <section id="discover">
+        <h2><span>Discover</span> our new project</h2>
+        <!-- FIXME: add URL -->
+        <a href="javascript:alert('TBD')" class="button">Visit website</a>
+      </section>
+      <section id="projects">
+        <h2>Projects</h2>
+        <img src="img/brand-development.png" alt="Scale brand" class="brand" />
+        <div class="container">
+          <div class="development-info">
+            <div>
+              <h3>About</h3>
+              <p>
+                Meet Scale's development at 20220 54A Avenue, in Langley City -
+                BC, Canada. Seventy-five homes, including studios and 1 and
+                2-bedroom apartments, are the latest addition to this vibrant
+                community. Strategically located in the heart of Langley City,
+                "your life in focus" truly comes alive. Everything you desire is
+                literally at your doorstep. Need to do some shopping? How about
+                a romantic dinner for two? With shops, services, and restaurants
+                ready to serve you, life at 20220 54A Avenue is as convenient as
+                it is exciting.
+              </p>
+            </div>
+            <div class="homes-and-bedrooms">
+              <div>
+                <h3>Homes</h3>
+                <p>75</p>
+              </div>
+              <div>
+                <h3>Bedrooms</h3>
+                <p>Studio, 1, 1 + flex, 2, 2 + flex</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3>Location</h3>
+            <p class="hidden md:block">
+              20220 54A Avenue, Langley city - BC, Canada
+            </p>
+            <p class="md:hidden">
+              20220 54A Avenue, Langley city<br />
+              BC, Canada
+            </p>
+            <img src="img/map.png" alt="Development location map" />
+            <!-- FIXME: add URL -->
+            <a href="javascript:alert('TBD')" class="button button--green">
+              Visit website
+            </a>
+          </div>
+        </div>
+
+        <div class="development-mosaic">
+          <img
+            src="img/development-streetscape.jpg"
+            alt="Rendered development streetview"
+          />
+          <div class="container">
+            <img
+              src="img/pillowfighting-couple.jpg"
+              alt="A young couple engajed in pillowfighting"
+            />
+            <img
+              src="img/development-vignette.jpg"
+              alt="Rendered back view of the development"
+            />
+            <img
+              src="img/father-and-daughter.png"
+              alt="A father and his young daughter having a tea party"
+            />
+          </div>
+        </div>
+        <div class="life-in-focus">
+          <p><span>Your life</span> in focus.</p>
+          <!-- FIXME: add URL -->
+          <a href="javascript:alert('TBD')" class="button button--orange">
+            Learn more
+          </a>
+        </div>
+      </section>
+      <section id="finale">
+        <div>
+          <p>Come home,</p>
+          <p>Your <span>roommate</span> awaits!</p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <img src="img/logo.png" alt="Scale logo" class="logo" />
+      <div class="container">
+        <nav>
+          <ul>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div>
+          <div class="social">
+            <!-- FIXME: add URLs -->
+            <a href="javascript:alert('TBD')">
+              <img src="img/icon-fb.png" alt="Facebook icon" />
+            </a>
+            <a href="javascript:alert('TBD')">
+              <img src="img/icon-ig.png" alt="Instagram icon" />
+            </a>
+            <a href="javascript:alert('TBD')">
+              <img src="img/icon-yt.png" alt="YouTube icon" />
+            </a>
+          </div>
+          <address>
+            P.O BOX 61689 BROOKSWOOD<br />
+            Langley, BC V3A 8C8<br />
+            <a href="mailto:homes@scaleliving.ca">homes@scaleliving.ca</a>
+          </address>
+        </div>
+      </div>
+      <div class="brand-container">
+        <div class="max-w-xs">
+          <!-- FIXME: add URL -->
+          <a href="javascript:alert('TBD')">
+            <img src="img/brand.png" alt="Scale brand" />
+          </a>
+        </div>
+        <div>
+          <a href="https://fifthave.ca/">
+            <img
+              src="img/brand-fifth-avenue.png"
+              alt="Fifth Avenue brand"
+              class="fifth-ave-brand"
+            />
+          </a>
+        </div>
+        <div class="balance-is-a-lifestyle">
+          <span>Balance</span> <span>is a</span> <span>lifestyle</span>
+        </div>
+        <div class="whitespace-nowrap">
+          <span id="copyright">Copyright © 2023 Scale Projects</span>
+          <a id="privacy-policy-link" href="javascript:void(0)">
+            Privacy Policy
+          </a>
+        </div>
+      </div>
+      <dialog id="privacy-policy">
+        <div class="dialog-header">
+          <h2>Privacy Policy</h2>
+          <button class="close-dialog" autofocus>×</button>
+        </div>
+        <p>
+          In our continuing effort to improve and maintain the high standard of
+          the Scale development, the developer reserves the right to modify or
+          change plans, layouts, specifications, features, including appliances,
+          and prices without notice. Materials may be substituted with
+          equivalent or better at the developer's sole discretion. All
+          dimensions and sizes are approximate and are based on architectural
+          measurements. As reverse, flipped and/or mirrored plans occur
+          throughout the development please see architectural plans for current
+          unit layout, if material to your decision to purchase. Illustrations,
+          renderings and marketing materials provided are an artist's conception
+          and are intended as a general reference only, all subject to change
+          without prior notice and not to be relied upon. Please ask one of the
+          helpful sales staff to reference the current architectural set of
+          construction drawings for the most accurate dimensions and other
+          details at time of sale. E.&O.E. Sales & Marketing provided by Fifth
+          Avenue Real Estate Marketing Ltd. 604-583-2212
+        </p>
+        <button class="close-dialog">close</button>
+      </dialog>
+    </footer>
+  </body>
+</html>
