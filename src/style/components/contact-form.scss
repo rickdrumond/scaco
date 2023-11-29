@@ -76,12 +76,4 @@
   button[type="submit"] {
     margin-top: 1em;
   }
-
-  #consent-label {
-    display: inline-block;
-
-    + a {
-      text-decoration: underline;
-    }
-  }
 }

@@ -212,7 +212,7 @@
                 Text
               </label>
             </div>
-            <label id="consent-label">
+            <label>
               <input
                 type="checkbox"
                 name="agreeToConsent"
@@ -220,18 +220,32 @@
                 style="margin-bottom: -5px"
                 required
               />
-              I agree to the
-            </label>
-            <!-- FIXME: terms modal -->
-            <a href="javascript:alert('TBD')">terms</a>
-            <div id="contact-terms">
               Yes, I consent to receiving electronic messages from Scale
               Projects and Fifth Avenue Real Estate Marketing Ltd. with updates
               on Scale and other projects that may be of interest to me. If you
               wish to stop receiving this information at any time, simply check
               unsubscribe at the bottom of any email received or contact
               live@scale.ca with unsubscribe in the subject line.
-            </div>
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                name="agreeToTerms"
+                value="yes"
+                style="margin-bottom: -5px"
+                required
+              />
+              <!-- FIXME: add URL -->
+              I agree to the terms: The information you provide will be kept
+              confidential and used only by Fifth Avenue Real Estate Marketing
+              to enhance your home buying experience and the level of service
+              you receive. The members of our Sales Team are all licensed Real
+              Estate Professionals with Fifth Avenue Real Estate Marketing and
+              therefore are unable to provide representation to potential
+              buyers. To learn more about various forms of Realtor
+              representation and the choices available to you, please
+              <a href="javascript:alert('TBD')">click here</a>.
+            </label>
             <div
               class="g-recaptcha"
               data-sitekey="6Lc2tRspAAAAAMLNy6B2O23BagKcxv7DkrXMKrd5"
@@ -360,13 +374,20 @@
         </div>
       </div>
       <div class="brand-container">
-        <div><img src="img/brand.png" alt="Scale brand" /></div>
         <div>
-          <img
-            src="img/brand-fifth-avenue.png"
-            alt="Fifth Avenue brand"
-            class="fifth-ave-brand"
-          />
+          <!-- FIXME: add URL -->
+          <a href="javascript:alert('TBD')">
+            <img src="img/brand.png" alt="Scale brand" />
+          </a>
+        </div>
+        <div>
+          <a href="https://fifthave.ca/">
+            <img
+              src="img/brand-fifth-avenue.png"
+              alt="Fifth Avenue brand"
+              class="fifth-ave-brand"
+            />
+          </a>
         </div>
         <div class="balance-is-a-lifestyle">
           <span>Balance</span> <span>is a</span> <span>lifestyle</span>

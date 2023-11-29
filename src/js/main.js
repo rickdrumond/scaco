@@ -22,6 +22,7 @@ const submitContactForm = (recaptchaToken) => {
     areYouRealtor: fd.get("areYouRealtor"),
     contactMethod: fd.getAll("contact-method"),
     agreeToConsent: fd.get("agreeToConsent"),
+    agreeToTerms: fd.get("agreeToTerms"),
     ReCAPTCHA: recaptchaToken,
   };
 
