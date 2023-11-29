@@ -1,6 +1,7 @@
 header {
   position: fixed;
   width: 100%;
+  padding: 0 $xs-h-spacing;
   z-index: 99;
   height: $header-height;
   display: flex;
@@ -12,19 +13,17 @@ header {
   border-bottom: 1px solid $logo-gray;
   transition: background-color 0.2s ease;
 
+  @screen lg {
+    padding: 0 $header-h-spacing;
+  }
+
   #brand-link {
-    max-width: 486px;
     height: 100%;
-    padding: $xs-h-spacing;
     display: flex;
     align-items: center;
 
-    @screen lg {
-      padding-left: 45px;
-    }
-
     img {
-      max-height: 1.5em;
+      width: 495px;
     }
   }
 
@@ -104,15 +103,13 @@ header {
   .logo {
     display: none;
     height: 100%;
-    padding: 1.5em;
-    padding-right: 45px;
 
     @screen lg {
       display: flex;
       align-items: center;
 
       img {
-        max-height: 100%;
+        width: $s-logo-width;
       }
     }
   }

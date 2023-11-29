@@ -65,8 +65,10 @@ p {
 
 #about {
   @screen lg {
-    background: url(../img/brand-v.png) no-repeat right;
+    // Align with header logo
+    background: url(../img/brand-v.png) calc(100% - $header-h-spacing) no-repeat;
   }
+
   .container {
     display: flex;
     flex-direction: column;
@@ -79,8 +81,7 @@ p {
       border-left: 1px solid $logo-gray;
 
       > div {
-        padding-right: $lg-h-spacing;
-        flex-basis: 80%;
+        flex: 0 0 70%;
       }
     }
   }
@@ -133,15 +134,15 @@ p {
     display: flex;
     align-items: center;
     gap: $lg-h-spacing;
-  }
 
-  > div {
-    &:first-of-type {
-      flex-basis: 30%;
-    }
+    > div {
+      &:first-of-type {
+        flex: 0 0 30%;
+      }
 
-    &:last-of-type {
-      // flex-grow: 1;
+      &:last-of-type {
+        flex: 0 0 calc(70% - $lg-h-spacing);
+      }
     }
   }
 
@@ -491,6 +492,14 @@ footer {
   address {
     font-family: $ff-brinnan-light;
     font-style: normal;
+  }
+
+  .balance-is-a-lifestyle {
+    display: none;
+
+    @screen lg {
+      display: block;
+    }
   }
 
   .brand-container {
