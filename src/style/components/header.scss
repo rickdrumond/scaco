@@ -23,7 +23,7 @@ header {
     align-items: center;
 
     img {
-      width: 495px;
+      width: 350px;
     }
   }
 
@@ -52,7 +52,8 @@ header {
     border-top: 1px solid $logo-gray;
     background-color: $dark-blue;
     font-family: $ff-winkell;
-    font-size: 0.8em;
+    font-size: 0.65rem;
+    letter-spacing: 0.12rem;
 
     position: absolute;
     top: 135px;
@@ -80,7 +81,8 @@ header {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 2em;
+      gap: 3rem;
+      margin-right: 3rem;
 
       @screen md {
         flex-direction: row;
