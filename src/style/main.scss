@@ -43,23 +43,28 @@ p {
   padding-top: calc($header-height + $content-spacing);
   padding-bottom: 81px;
   min-height: 100vh;
-  background: url(../img/cover.png) fixed left/cover;
-  background-repeat: no-repeat;
+  background: url(../img/cover.png) 30% / cover no-repeat fixed;
+
+  @screen lg {
+    background-size: cover;
+    background-position: auto 10%;
+  }
 
   .container {
     margin-left: 0;
-    max-width: 594px;
+
+    p:last-of-type {
+      max-width: 594px;
+      width: 70%;
+      margin-top: 27px;
+      margin-bottom: 27px;
+      font-family: $ff-brinnan-light;
+      color: white;
+    }
 
     @screen md {
       margin-top: 198px;
     }
-  }
-
-  p {
-    margin-top: 27px;
-    margin-bottom: 27px;
-    font-family: $ff-brinnan-light;
-    color: white;
   }
 }
 
