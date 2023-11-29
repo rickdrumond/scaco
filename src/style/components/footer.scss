@@ -42,7 +42,9 @@ footer {
   }
 
   .social {
-    display: flex;
+    // TODO: display after links are available
+    // display: flex;
+    display: none;
     justify-content: space-around;
     margin-bottom: 1rem;
 
@@ -84,11 +86,10 @@ footer {
     @screen lg {
       flex-direction: row-reverse;
       // align-items: flex-end;
-      gap: 0rem;
 
       > * {
         align-items: stretch;
-        flex: 1;
+        flex: 1 auto;
         max-width: 100%;
 
         * {
@@ -107,9 +108,9 @@ footer {
     display: block;
     text-align: center;
 
-    @screen lg {
+    @screen sm {
       display: inline;
-      margin-left: 1rem;
+      margin-left: 0.5em;
     }
   }
 
