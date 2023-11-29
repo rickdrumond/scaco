@@ -9,6 +9,7 @@
 @import "components/components";
 @import "components/header";
 @import "components/contact-form";
+@import "components/footer";
 
 .grecaptcha-badge {
   // Displayed through JS when contact form is in view
@@ -19,8 +20,7 @@ body {
   background-color: $dark-blue;
 }
 
-section,
-footer {
+section {
   padding: $xs-v-spacing $xs-h-spacing;
   // Prevent wrong anchor scroll position due to fixed header
   scroll-margin-top: $header-height;
@@ -208,6 +208,7 @@ p {
 }
 
 #contact {
+  scroll-margin-top: calc($header-height - 100vh);
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -215,6 +216,7 @@ p {
   font-family: $ff-brinnan-light;
 
   @screen lg {
+    scroll-margin-top: $header-height;
     flex-direction: row;
   }
 
@@ -439,122 +441,5 @@ p {
     span {
       color: $pinkish-beige;
     }
-  }
-}
-
-footer {
-  position: relative;
-  color: white;
-
-  .logo {
-    position: absolute;
-    // padding: inherit;
-    top: $xs-v-spacing;
-    right: $xs-h-spacing;
-    width: 3rem;
-
-    @screen lg {
-      top: $lg-v-spacing;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-      width: 5rem;
-    }
-  }
-
-  .container {
-    display: flex;
-    flex-direction: column;
-
-    @screen lg {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-  }
-
-  nav ul {
-    font-family: $ff-winkell;
-
-    li {
-      margin-bottom: 1rem;
-    }
-  }
-
-  .social {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 1rem;
-
-    @screen lg {
-      justify-content: flex-start;
-    }
-
-    img {
-      max-height: 3em;
-    }
-  }
-
-  address {
-    font-family: $ff-brinnan-light;
-    font-style: normal;
-  }
-
-  .balance-is-a-lifestyle {
-    display: none;
-
-    @screen lg {
-      display: block;
-    }
-  }
-
-  .brand-container {
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-
-    @screen lg {
-      flex-direction: row-reverse;
-      align-items: flex-end;
-      gap: 0rem;
-
-      > * {
-        align-items: stretch;
-        flex: 1;
-        max-width: 100%;
-        text-align: center;
-
-        * {
-          margin: 0 auto;
-        }
-      }
-    }
-
-    :last-child {
-      flex-grow: 2;
-    }
-  }
-
-  .fifth-ave-brand {
-    max-width: 180px;
-  }
-
-  #privacy-policy-link {
-    text-decoration: underline;
-    display: block;
-    text-align: center;
-
-    @screen lg {
-      display: inline;
-      margin-left: 1rem;
-    }
-  }
-
-  #privacy-policy-link,
-  #copyright {
-    font-family: $ff-brinnan-light;
-    color: white;
-    text-align: center;
   }
 }
