@@ -62,7 +62,9 @@ window.onRecaptchaSuccess = function (token) {
 
 // Enable smooth scrolling for same-page links
 document.addEventListener("click", (e) => {
-  if ((a = e.target.closest("a")) && isAnchor(a)) {
+  const a = e.target.closest("a");
+
+  if (a && isAnchor(a)) {
     e.preventDefault();
 
     document.querySelector(a.hash).scrollIntoView({
@@ -109,6 +111,19 @@ document.addEventListener("DOMContentLoaded", () => {
     // Form will be submitted by ReCAPTCHA's callback (fn onRecaptchaSuccess)
     grecaptcha.execute();
   });
+
+  document
+    .getElementById("privacy-policy-link")
+    .addEventListener("click", () => {
+      const dialog = document.getElementById("privacy-policy");
+      dialog.show();
+
+      dialog.addEventListener("click", (e) => {
+        if (e.target.classList.contains("close-dialog")) {
+          dialog.close();
+        }
+      });
+    });
 
   // Show/Hide ReCAPTCHA's badge if form is in viewport
   const handleIntersection = (entries, _observer) => {
