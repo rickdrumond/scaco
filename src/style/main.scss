@@ -17,6 +17,10 @@
   visibility: hidden;
 }
 
+html {
+  zoom: 0.75;
+}
+
 body {
   background-color: $dark-blue;
 }
@@ -211,7 +215,9 @@ p {
 #contact {
   scroll-margin-top: calc($header-height - 100vh);
   padding: 0;
-  display: flex;
+  // Hiding per client's request
+  // display: flex;
+  display: none;
   flex-direction: column;
   background-color: $light-blue;
   font-family: $ff-brinnan-light;
