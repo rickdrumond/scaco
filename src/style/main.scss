@@ -18,7 +18,7 @@
 }
 
 html {
-  zoom: 0.75;
+  zoom: 0.9;
 }
 
 body {
@@ -364,6 +364,7 @@ p {
       margin-bottom: $xs-v-spacing;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       gap: $xs-v-spacing;
 
       @screen lg {
