@@ -50,6 +50,10 @@ p {
   min-height: 100vh;
   background: url(../img/cover.png) 30% / cover no-repeat fixed;
 
+  @supports (-webkit-touch-callout: none) {
+    background-attachment: scroll;
+  }
+
   @screen lg {
     background-size: cover;
     background-position: auto 10%;
