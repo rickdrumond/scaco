@@ -8,14 +8,14 @@
 
 @import "components/components";
 @import "components/header";
-@import "components/contact-form";
+// @import "components/contact-form";
 @import "components/footer";
 @import "components/privacy-policy";
 
-.grecaptcha-badge {
-  // Displayed through JS when contact form is in view
-  visibility: hidden;
-}
+// .grecaptcha-badge {
+//   // Displayed through JS when contact form is in view
+//   visibility: hidden;
+// }
 
 html {
   zoom: 0.9;
