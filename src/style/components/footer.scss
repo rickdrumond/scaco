@@ -2,6 +2,7 @@ footer {
   padding: $xs-v-spacing $xs-h-spacing;
   position: relative;
   color: white;
+  border-top: 1px solid $logo-gray;
 
   @screen lg {
     padding: $lg-v-spacing $header-h-spacing $header-h-spacing;
