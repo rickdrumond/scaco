@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Scale Projects</title>
-    <link rel="stylesheet" href="style/main.scss" />
-    <script type="module" src="js/main.js"></script>
-    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
-  </head>
+  <include src="partials/_head.html" locals='{ "title": "Scale Projects" }'>
+  </include>
   <body>
     <header>
       <a href="/" id="brand-link">
@@ -16,7 +10,7 @@
       <nav id="menu">
         <ul>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="/rentals">Rentals</a></li>
+          <li><a href="rentals.html">Rentals</a></li>
           <li><a href="#about">About</a></li>
           <li>
             <a href="mailto:info@scalegroup.ca" target="_blank">Contact</a>
@@ -350,6 +344,7 @@
         </div>
       </section> -->
     </main>
-    <include src="partials/_footer.html" locals='{}' />
+    <include src="partials/_footer.html" locals='{}'>
+    </include>
   </body>
 </html>
