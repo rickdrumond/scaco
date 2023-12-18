@@ -473,6 +473,7 @@ p {
   h2 {
     font-size: 3rem;
     text-transform: uppercase;
+    margin-bottom: 0.5em;
   }
 
   h3 {
@@ -517,6 +518,13 @@ p {
     &.bg-light {
       background-color: $logo-gray;
 
+      h1,
+      h3,
+      p,
+      address {
+        color: $dark-blue;
+      }
+
       h2 {
         color: $light-blue;
 
@@ -527,6 +535,10 @@ p {
 
       .button {
         background-color: $dark-blue;
+      }
+
+      hr {
+        border-color: $dark-blue;
       }
     }
   }
@@ -640,5 +652,17 @@ section#informations-and-documents {
   > img {
     display: inline;
     rotate: 180deg;
+  }
+}
+
+section#financial-compensation-to-tenants {
+  align-items: flex-start;
+
+  h3 {
+    margin-bottom: 0.5em;
+  }
+
+  hr {
+    margin-block: 1em;
   }
 }
