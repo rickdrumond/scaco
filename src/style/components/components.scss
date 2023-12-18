@@ -16,7 +16,8 @@
   }
 
   &:hover {
-    background-color: #0b1b30c2;
+    // background-color: #0b1b30c2;
+    filter: brightness(1.2);
   }
 
   &--blue {
@@ -34,9 +35,19 @@
     background-color: $posh-orange;
   }
 
-  &--pdf {
-    max-width: 100%;
+  &--beige {
+    border-color: $pinkish-beige;
+    background-color: $pinkish-beige;
+    color: $dark-blue;
 
+    &.button--pdf {
+      > span::after {
+        content: url("../svg/pdf-blue.svg");
+      }
+    }
+  }
+
+  &--pdf {
     > span::after {
       content: url("../svg/pdf.svg");
       margin-left: 0.3em;
