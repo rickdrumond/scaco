@@ -490,7 +490,7 @@ p {
   }
 
   hr {
-    border-top: 1px solid white;
+    border-top: 2px solid white;
     margin-block: 3rem;
   }
 
@@ -680,5 +680,11 @@ section#moving-expenses {
         color: $pinkish-beige;
       }
     }
+  }
+}
+
+section#first-right-of-refusal {
+  hr {
+    margin-block: 2em;
   }
 }
