@@ -484,7 +484,8 @@ p {
   }
 
   p,
-  address {
+  address,
+  li {
     font-family: $ff-brinnan;
     margin-bottom: 1em;
   }
@@ -695,6 +696,21 @@ section#vulnerable-tenants {
       margin-top: 2.5em;
       border-bottom: 1px solid white;
       padding-bottom: 0.5em;
+    }
+  }
+}
+
+section#additional-relocation-assistance {
+  ul {
+    list-style-position: inside;
+    list-style-type: circle;
+  }
+
+  li {
+    margin-bottom: 1em;
+
+    &::marker {
+      content: "o ";
     }
   }
 }
