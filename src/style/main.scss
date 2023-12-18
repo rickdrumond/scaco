@@ -79,7 +79,6 @@ p {
 
 #about {
   @screen lg {
-    // Align with header logo
     background: url(../img/brand-v.png) calc(100% - $header-h-spacing) no-repeat;
   }
 
@@ -462,14 +461,62 @@ p {
   h3,
   p,
   address {
-    font-family: $ff-brinnan;
     color: white;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: $ff-brinnan-bold;
+  }
+
+  h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+  }
+
+  p,
+  address {
+    font-family: $ff-brinnan;
+  }
+
+  > section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    h2 {
+      line-height: 1.2;
+    }
+
+    .button {
+      line-height: 1;
+      padding-block: 1em;
+      box-shadow: 0 4px 4px 0 gray;
+      border: none;
+    }
+
+    &.bg-light {
+      background-color: $logo-gray;
+
+      h2 {
+        color: $light-blue;
+
+        > span {
+          color: $dark-blue;
+        }
+      }
+
+      .button {
+        background-color: $dark-blue;
+      }
+    }
   }
 }
 
-#tenant-relocation-info {
-  padding-top: calc($header-height + ($content-spacing * 2));
+section#tenant-relocation-info {
   display: flex;
+  padding-top: calc($header-height + ($content-spacing * 2));
   align-items: flex-start;
   gap: $content-spacing;
   color: white;
@@ -497,8 +544,13 @@ p {
   }
 }
 
-#informations-and-documents {
+section#informations-and-documents {
+  display: block;
   background-color: $dark-blue;
+
+  @screen lg {
+    background: url(../img/brand-v.png) calc(100% - $header-h-spacing) no-repeat;
+  }
 
   .container {
     border-left: 1px solid $logo-gray;
@@ -547,5 +599,28 @@ p {
     a {
       text-decoration: underline;
     }
+  }
+}
+
+.framed-buttons {
+  margin-inline: 80px;
+
+  .button {
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.corner-container {
+  text-align: right;
+
+  > img {
+    display: inline;
+    rotate: 180deg;
   }
 }

@@ -33,6 +33,15 @@
     border-color: $posh-orange;
     background-color: $posh-orange;
   }
+
+  &--pdf {
+    max-width: 100%;
+
+    > span::after {
+      content: url("../svg/pdf.svg");
+      margin-left: 0.3em;
+    }
+  }
 }
 
 .balance-is-a-lifestyle {
