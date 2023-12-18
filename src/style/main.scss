@@ -455,3 +455,34 @@ p {
 //     }
 //   }
 // }
+
+#tenant-relocation-info {
+  padding-top: calc($header-height + ($content-spacing * 2));
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  gap: $content-spacing;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+
+  @screen lg {
+    gap: $lg-v-spacing;
+  }
+
+  h1 {
+    font-size: 3rem;
+    letter-spacing: 0.3rem;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+
+    > span {
+      color: $pinkish-beige;
+    }
+  }
+
+  p {
+    margin-bottom: 1em;
+  }
+}
