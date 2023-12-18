@@ -498,7 +498,7 @@ p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: flex-start;
-    gap: 10rem;
+    gap: 5rem;
 
     h2 {
       line-height: 1.2;
@@ -686,5 +686,15 @@ section#moving-expenses {
 section#first-right-of-refusal {
   hr {
     margin-block: 2em;
+  }
+}
+
+section#vulnerable-tenants {
+  > div:last-child {
+    p {
+      margin-top: 2.5em;
+      border-bottom: 1px solid white;
+      padding-bottom: 0.5em;
+    }
   }
 }
