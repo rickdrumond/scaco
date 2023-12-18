@@ -1,21 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<include src="partials/_head.html" locals='{ "title": "Scale Projects - Rentals" }'>
-</include>
-<body>
-  <include src="partials/_header.html" locals='{}'>
+  <include
+    src="partials/_head.html"
+    locals='{ "title": "Scale Projects - Rentals" }'
+  >
   </include>
-  <main>
-    <section id="tenant-relocation-info">
-      <img src="svg/document.svg" alt="Document icon">
-      <div>
-        <h1><span>20214 & 20224 54A Avenue</span> Tenant Relocation Information</h1>
-        <p>The following information & documents have been provided to the tenants of 20214 & 20224 54A Avenue but are also made available below.</p>
-        <p>This information is to be regularly updated as the Development Application progresses through the Municipal process.</p>
-      </div>
-    </section>
-  </main>
-  <include src="partials/_footer.html" locals='{}'>
-  </include>
-</body>
+  <body>
+    <include src="partials/_header.html" locals="{}"> </include>
+    <main id="rentals">
+      <section id="tenant-relocation-info">
+        <img src="svg/document.svg" alt="Document icon" />
+        <div>
+          <h1>
+            <span>20214 & 20224 54A Avenue</span> Tenant Relocation Information
+          </h1>
+          <p>
+            The following information & documents have been provided to the
+            tenants of 20214 & 20224 54A Avenue but are also made available
+            below.
+          </p>
+          <p>
+            This information is to be regularly updated as the Development
+            Application progresses through the Municipal process.
+          </p>
+        </div>
+      </section>
+      <section id="informations-and-documents">
+        <div class="container">
+          <aside>
+            <h2><span>Informations</span><br />& Documents</h2>
+            <img src="img/logo.png" alt="Scale logo" />
+          </aside>
+        </div>
+        <div>
+          <h3>Tenant Relocation Coordinator</h3>
+          <address>
+            Zaklina Vracar,<br />
+            Z Agency Management<br />
+            Phone: 236-600-5131 ext 100<br />
+            Email:
+            <a href="mailto:zaklina@zagencymanagement.com"
+              >zaklina@zagencymanagement.com</a
+            ><br />
+            Regular Business Hours (Mon – Fri 9am to 5pm)<br />
+          </address>
+        </div>
+      </section>
+    </main>
+    <include src="partials/_footer.html" locals="{}"> </include>
+  </body>
 </html>

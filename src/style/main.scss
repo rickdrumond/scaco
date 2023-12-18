@@ -456,9 +456,19 @@ p {
 //   }
 // }
 
+#rentals {
+  h1,
+  h2,
+  h3,
+  p,
+  address {
+    font-family: $ff-brinnan;
+    color: white;
+  }
+}
+
 #tenant-relocation-info {
   padding-top: calc($header-height + ($content-spacing * 2));
-  min-height: 100vh;
   display: flex;
   align-items: flex-start;
   gap: $content-spacing;
@@ -484,5 +494,58 @@ p {
 
   p {
     margin-bottom: 1em;
+  }
+}
+
+#informations-and-documents {
+  background-color: $dark-blue;
+
+  .container {
+    border-left: 1px solid $logo-gray;
+    border-left-style: outset;
+    padding-top: 12rem;
+    margin-bottom: $lg-v-spacing;
+  }
+
+  aside {
+    @screen lg {
+      margin-left: -2px;
+      padding-top: 0.5em;
+      border-left-style: outset;
+      background-color: $dark-blue;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 2rem;
+      text-transform: uppercase;
+      line-height: 1.2;
+
+      > span {
+        color: $pinkish-beige;
+      }
+    }
+
+    img {
+      max-height: 1.5em;
+      margin-top: 1em;
+    }
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-family: $ff-brinnan-bold;
+    color: $pinkish-beige;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+  }
+
+  address {
+    font-style: normal;
+    font-size: 1.2rem;
+
+    a {
+      text-decoration: underline;
+    }
   }
 }
