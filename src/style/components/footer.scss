@@ -142,13 +142,9 @@ footer {
 
   #privacy-policy-link {
     text-decoration: underline;
-    display: block;
+    display: inline;
+    margin-left: 0.5em;
     text-align: center;
-
-    @screen sm {
-      display: inline;
-      margin-left: 0.5em;
-    }
   }
 
   #privacy-policy-link,
