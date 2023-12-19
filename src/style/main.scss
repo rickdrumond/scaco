@@ -26,6 +26,7 @@ body {
 }
 
 section {
+  width: 100%;
   padding: $xs-v-spacing $xs-h-spacing;
   // Prevent wrong anchor scroll position due to fixed header
   scroll-margin-top: $header-height;
@@ -471,9 +472,14 @@ p {
   }
 
   h2 {
-    font-size: 3rem;
+    font-size: 2rem;
     text-transform: uppercase;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
+
+    @screen lg {
+      font-size: 3rem;
+      margin-bottom: 0.5em;
+    }
   }
 
   h3 {
@@ -504,10 +510,15 @@ p {
   }
 
   > section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: flex-start;
-    gap: 5rem;
+    padding-inline: $xs-h-spacing;
+
+    @screen lg {
+      padding: $lg-v-spacing $lg-h-spacing;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: flex-start;
+      gap: 5rem;
+    }
 
     h2 {
       line-height: 1.2;
@@ -555,7 +566,8 @@ p {
 
 section#tenant-relocation-info {
   display: flex;
-  padding-top: calc($header-height + ($content-spacing * 2));
+  padding-top: $header-height + $xs-v-spacing;
+  padding-bottom: 0;
   align-items: flex-start;
   gap: $content-spacing;
   color: white;
@@ -563,15 +575,20 @@ section#tenant-relocation-info {
   letter-spacing: 0.1rem;
 
   @screen lg {
+    padding-top: $header-height + ($lg-v-spacing * 2);
     gap: $lg-v-spacing;
   }
 
   h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     letter-spacing: 0.3rem;
     color: white;
     text-transform: uppercase;
     margin-bottom: 1em;
+
+    @screen lg {
+      font-size: 3rem;
+    }
 
     > span {
       color: $pinkish-beige;
@@ -595,16 +612,18 @@ section#informations-and-documents {
     border-left: 1px solid $logo-gray;
     border-left-style: outset;
     padding-top: 12rem;
-    margin-bottom: $lg-v-spacing;
+    margin-bottom: $xs-v-spacing;
+
+    @screen lg {
+      margin-bottom: $lg-v-spacing;
+    }
   }
 
   aside {
-    @screen lg {
-      margin-left: -2px;
-      padding-top: 0.5em;
-      border-left-style: outset;
-      background-color: $dark-blue;
-    }
+    margin-left: -2px;
+    padding-top: 0.5em;
+    border-left-style: outset;
+    background-color: $dark-blue;
 
     h2 {
       margin: 0;
@@ -632,7 +651,9 @@ section#informations-and-documents {
   }
 
   address {
-    font-size: 1.2rem;
+    @screen lg {
+      font-size: 1.5rem;
+    }
   }
 }
 
@@ -640,15 +661,17 @@ section#documents-available-for-tenants {
   align-items: center;
 
   .framed-buttons {
-    margin-inline: 80px;
+    @screen lg {
+      margin-inline: 80px;
 
-    .button {
-      &:first-of-type {
-        margin-top: 0;
-      }
+      .button {
+        &:first-of-type {
+          margin-top: 0;
+        }
 
-      &:last-of-type {
-        margin-bottom: 0;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
       }
     }
   }
