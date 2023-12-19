@@ -3,7 +3,7 @@ header {
   width: 100%;
   padding: 0 $xs-h-spacing;
   z-index: 99;
-  height: $header-height;
+  height: var(--header-height);
   display: flex;
   columns: 2;
   flex-wrap: nowrap;
@@ -54,7 +54,7 @@ header {
     letter-spacing: 0.12rem;
 
     position: absolute;
-    top: $header-height;
+    top: var(--header-height);
     right: 0;
     border: 1px solid $logo-gray;
     border-top: none;

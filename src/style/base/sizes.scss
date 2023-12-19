@@ -1,4 +1,3 @@
-$header-height: 121px;
 $content-spacing: 36px;
 $content-max-width: 1203px;
 
@@ -13,3 +12,11 @@ $lg-h-spacing: 180px;
 
 $header-h-spacing: 45px;
 $s-logo-width: 72px;
+
+:root {
+  --header-height: 72px;
+
+  @screen md {
+    --header-height: 121px;
+  }
+}
