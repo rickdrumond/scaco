@@ -17,21 +17,6 @@
 //   visibility: hidden;
 // }
 
-// https://utopia.fyi/type/calculator
-:root {
-  --fs-0: clamp(14px, 13px + 0.03vw, 16px);
-  --fs-1: clamp(16px, 14px + 1vw, 18px);
-
-  --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
-  --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
-  --step-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
-  --step-1: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
-  --step-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
-  --step-3: clamp(1.9438rem, 1.7707rem + 0.8652vw, 2.4413rem);
-  --step-4: clamp(2.3325rem, 2.0823rem + 1.2511vw, 3.0519rem);
-  --step-5: clamp(2.7994rem, 2.4461rem + 1.7663vw, 3.815rem);
-}
-
 body {
   background-color: $dark-blue;
 }
@@ -51,7 +36,8 @@ section {
   }
 }
 
-p {
+p,
+address {
   margin-bottom: $content-spacing;
   font-size: var(--fs-1);
 }
@@ -61,6 +47,7 @@ p {
   padding-top: calc(var(--header-height) + $content-spacing);
   padding-bottom: 81px;
   min-height: 100vh;
+  min-height: 100dvh;
   background: url(../img/cover.png) 30% / cover no-repeat fixed;
 
   @supports (-webkit-touch-callout: none) {
@@ -114,7 +101,7 @@ p {
 
   h2 {
     margin-bottom: 2em;
-    font-size: 1.5rem;
+    font-size: var(--fs-3);
     color: $logo-gray;
   }
 
@@ -578,7 +565,7 @@ p {
 
 section#tenant-relocation-info {
   display: flex;
-  padding-top: var(--header-height) + $xs-v-spacing;
+  padding-top: calc(var(--header-height) + $xs-v-spacing);
   padding-bottom: 0;
   align-items: flex-start;
   gap: $content-spacing;
@@ -587,7 +574,7 @@ section#tenant-relocation-info {
   letter-spacing: 0.1rem;
 
   @screen lg {
-    padding-top: var(--header-height) + ($lg-v-spacing * 2);
+    padding-top: calc(var(--header-height) + ($lg-v-spacing * 2));
     gap: $lg-v-spacing;
   }
 

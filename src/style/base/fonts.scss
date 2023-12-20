@@ -54,8 +54,13 @@ $ff-brinnan-light: "Brinnan-Light", Helvetica, Arial, sans-serif;
 $ff-brinnan: "Brinnan-Regular", Helvetica, Arial, sans-serif;
 $ff-winkell: "Winkell-SuperWide", Helvetica, Arial, sans-serif;
 
-html {
-  font-size: 19px;
+// https://utopia.fyi/type/calculator
+:root {
+  --fs--1: clamp(12px, 11px + 0.1vw, 13px);
+  --fs-0: clamp(14px, 13px + 0.2vw, 16px);
+  --fs-1: clamp(16px, 15px + 0.25vw, 18px);
+  --fs-3: clamp(20px, 18px + 0.5vw, 24px);
+
   font-family: $ff-brinnan-light;
 }
 

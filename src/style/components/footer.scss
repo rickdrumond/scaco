@@ -150,7 +150,7 @@ footer {
   #privacy-policy-link,
   #copyright {
     font-family: $ff-brinnan-light;
-    font-size: 0.9rem;
+    font-size: var(--fs-0);
     color: white;
     text-align: center;
   }

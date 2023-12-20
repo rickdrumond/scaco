@@ -30,7 +30,7 @@ header {
   #menu-toggler {
     width: 50px;
     height: 100%;
-    padding: $xs-v-spacing $xs-h-spacing;
+    padding-left: $xs-h-spacing;
     border-left: 1px solid $logo-gray;
 
     @screen md {
@@ -50,7 +50,7 @@ header {
     line-height: 2em;
     background-color: $dark-blue;
     font-family: $ff-winkell;
-    font-size: 0.65rem;
+    font-size: var(--fs--1);
     letter-spacing: 0.12rem;
 
     position: absolute;
