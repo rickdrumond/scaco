@@ -13,7 +13,7 @@ footer {
     // padding: inherit;
     top: $xs-v-spacing;
     right: $xs-h-spacing;
-    width: 3rem;
+    width: $s-logo-width;
 
     @screen lg {
       width: 52.7833px;

@@ -11,12 +11,12 @@ $lg-v-spacing: 98px;
 $lg-h-spacing: 180px;
 
 $header-h-spacing: 45px;
-$s-logo-width: 72px;
+$s-logo-width: 54px;
 
 :root {
   --header-height: 72px;
 
   @screen md {
-    --header-height: 121px;
+    --header-height: 99px;
   }
 }

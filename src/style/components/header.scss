@@ -139,6 +139,7 @@ header {
       align-items: center;
 
       img {
+        max-width: $s-logo-width;
         width: $s-logo-width;
       }
     }
