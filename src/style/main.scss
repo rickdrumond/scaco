@@ -52,6 +52,7 @@ address {
 
   @supports (-webkit-touch-callout: none) {
     background-attachment: scroll;
+    background-position-x: 35%;
   }
 
   @screen lg {
